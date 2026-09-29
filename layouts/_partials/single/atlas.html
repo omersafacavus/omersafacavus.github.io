@@ -20,7 +20,7 @@
       {{- if eq .Params.guidetype "main" }}<span class="chip chip--atl-solid">{{ i18n "guide" }}</span>{{ end }}
       {{- with .Params.level }}<span class="chip">{{ i18n "level" }} · {{ . }}</span>{{ end }}
       <span class="chip">{{ .ReadingTime }} {{ i18n "reading_time" }}</span>
-      <span class="chip">{{ i18n "updated" }} · {{ .Lastmod | time.Format ":date_medium" }}</span>
+      <span class="chip">{{ i18n "updated" }} · {{ partial "fmt-date.html" .Lastmod }}</span>
     </div>
     {{- with .Description }}<p class="lead">{{ . }}</p>{{ end }}
     {{- if not (partial "alternates.html" .) }}<p class="notice">{{ i18n "not_translated" }}</p>{{ end }}

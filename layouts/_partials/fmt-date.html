@@ -1,0 +1,13 @@
+{{- /*
+  Site genelinde tek tarih biçimi: gün, kısaltılmış ay, yıl.
+  EN "15 Nov 2026", TR "15 Kas 2026".
+  Girdi: ISO tarih dizesi ("2026-11-15") ya da bir zaman nesnesi (.Date, .Lastmod).
+  Yalnızca görünen metin içindir; datetime özniteliği ve yapısal veri ISO kalır.
+*/ -}}
+{{- $t := . }}
+{{- if eq (printf "%T" $t) "string" }}{{ $t = time $t }}{{ end }}
+{{- if eq site.Language.Lang "tr" -}}
+{{ $t | time.Format ":date_medium" }}
+{{- else -}}
+{{ $t | time.Format "2 Jan 2006" }}
+{{- end -}}

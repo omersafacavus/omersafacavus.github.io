@@ -6,9 +6,9 @@
       <h1>{{ .Title }}</h1>
       {{- with .Description }}<p>{{ . }}</p>{{ end }}
       <div class="post-meta">
-        <span class="chip"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></span>
+        <span class="chip"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "fmt-date.html" .Date }}</time></span>
         <span class="chip">{{ .ReadingTime }} {{ i18n "reading_time" }}</span>
-        {{- if ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }}<span class="chip">{{ i18n "updated" }} · {{ .Lastmod | time.Format ":date_medium" }}</span>{{ end }}
+        {{- if ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }}<span class="chip">{{ i18n "updated" }} · {{ partial "fmt-date.html" .Lastmod }}</span>{{ end }}
         {{- range .GetTerms "tags" }}<a class="chip chip--acc" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
       </div>
       {{- if not .IsTranslated }}<p class="notice">{{ i18n "not_translated" }}</p>{{ end }}

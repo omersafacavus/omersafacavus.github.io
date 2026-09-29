@@ -4,9 +4,11 @@
 # region: eu | tr | de | us | international
 # status: open | upcoming | closed
 # periodic: true = her yıl/dönem açılır
-# deadline: ISO tarih. Boş bırakılırsa "sürekli başvuru" gösterilir.
-# deadline_text: takvimi tek tarihe sığmayan programlar için serbest metin.
-#   Verildiğinde deadline alanının yerine geçer.
+# deadline: ISO tarih (2026-11-15). Sayfada her dilde "15 Kas 2026" biçiminde
+#   yazılır, serbest metin girilmez.
+# deadline_kind: deadline (varsayılan, tarih son başvurudur) | opens (tarih
+#   başvurunun açılış günüdür) | rolling (tarih yok, sürekli başvuru) |
+#   tba (tarih yok, çağrı henüz duyurulmadı). Ayrıntı açıklamaya yazılır.
 meta:
   verified: "2026-09-29"
 
@@ -167,6 +169,7 @@ calls:
     stage: any
     region: tr
     deadline: ""
+    deadline_kind: rolling
     duration:
       en: "Up to 12 months"
       tr: "12 aya kadar"
@@ -190,9 +193,7 @@ calls:
     stage: senior
     region: tr
     deadline: ""
-    deadline_text:
-      en: "2026 call not yet announced (2025: 30 Dec)"
-      tr: "2026 çağrısı henüz duyurulmadı (2025: 30 Aralık)"
+    deadline_kind: tba
     duration:
       en: "24–36 months"
       tr: "24–36 ay"
@@ -216,9 +217,7 @@ calls:
     stage: postdoc
     region: tr
     deadline: ""
-    deadline_text:
-      en: "2026 call not yet announced (2025: 30 Dec)"
-      tr: "2026 çağrısı henüz duyurulmadı (2025: 30 Aralık)"
+    deadline_kind: tba
     duration:
       en: "24–36 months"
       tr: "24–36 ay"
@@ -243,10 +242,8 @@ calls:
     type: fellowship
     stage: postdoc
     region: de
-    deadline: ""
-    deadline_text:
-      en: "Three rounds a year, next opens 15 Nov 2026"
-      tr: "Yılda üç dönem, sıradaki 15 Kas 2026"
+    deadline: "2026-11-15"
+    deadline_kind: opens
     duration:
       en: "6–24 months"
       tr: "6–24 ay"

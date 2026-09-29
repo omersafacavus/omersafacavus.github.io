@@ -3,7 +3,7 @@
 <ul class="post-list">
   {{- range $posts }}
   <li>
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "fmt-date.html" .Date }}</time>
     <div><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>{{ with .Description }}<p>{{ . }}</p>{{ end }}</div>
   </li>
   {{- end }}
