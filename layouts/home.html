@@ -28,16 +28,8 @@
 <section class="section" aria-labelledby="about">
   <div class="wrap split">
     {{ partial "sec-head.html" (dict "num" "01" "id" "about" "title" (i18n "about")) }}
-    <div class="split-body">
-      <div class="prose-lg">
-        {{- range index $p.about $lang }}<p>{{ . }}</p>{{ end }}
-      </div>
-      {{- with $p.keywords }}
-      <div class="keywords" aria-label="{{ i18n "keywords" }}">
-        <span class="label">{{ i18n "keywords" }}</span>
-        <ul>{{ range . }}<li>{{ partial "t.html" (merge $t (dict "v" .)) }}</li>{{ end }}</ul>
-      </div>
-      {{- end }}
+    <div class="split-body prose-lg">
+      {{- range index $p.about $lang }}<p>{{ . }}</p>{{ end }}
     </div>
   </div>
 </section>

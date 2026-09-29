@@ -10,6 +10,9 @@
       </div>
     </div>
     {{ partial "newsletter.html" (dict "id" "footer-newsletter") }}
+    <nav class="foot-nav" aria-label="{{ i18n "main_menu" }}">
+      {{- range site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}
+    </nav>
     <div class="foot-meta">
       <span>© {{ now.Year }} {{ $p.name }}</span>
       <nav aria-label="Footer">

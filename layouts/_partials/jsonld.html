@@ -7,6 +7,8 @@
 {{- range $p.links }}{{ with .url }}{{ $sameAs = $sameAs | append . }}{{ end }}{{ end -}}
 {{- $knows := slice -}}
 {{- range site.Data.research }}{{ $knows = $knows | append (partial "t.html" (dict "v" .title "lang" $lang)) }}{{ end -}}
+{{- range site.Data.profile.keywords }}{{ $knows = $knows | append (partial "t.html" (dict "v" . "lang" $lang)) }}{{ end -}}
+{{- $knows = $knows | uniq -}}
 {{- $person := dict
     "@type" "Person"
     "@id" $personID
