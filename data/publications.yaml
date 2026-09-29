@@ -7,17 +7,6 @@
 
 - type: journal
   year: 2026
-  authors: "Khalilvandi Behrouzyar, S., Cavus, O. S., & Koc, B."
-  title: "A parametric heat source formulation for arbitrary laser beam shaping: application to core–ring profiles and their transient thermal history in PBF-LB"
-  venue: "International Journal of Extreme Manufacturing"
-  status: submitted
-  doi: ""
-  url: ""
-  areas: [beam-shaping, thermal-simulation]
-  featured: true
-
-- type: journal
-  year: 2026
   authors: "Cavus, O. S., Khalilvandi Behrouzyar, S., & Koc, B."
   title: "Prediction of cooling rates based on integrated scanning strategies with sophisticated parametric modeling-assisted simulation for additive manufacturing"
   venue: "Progress in Additive Manufacturing"

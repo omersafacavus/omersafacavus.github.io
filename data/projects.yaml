@@ -13,17 +13,6 @@
   areas: [scan-strategies, thermal-simulation]
   featured: true
 
-- id: beam-shaping-heat-source
-  title: { en: "Parametric heat source for beam shaping", tr: "Işın şekillendirme için parametrik ısı kaynağı" }
-  summary: { en: "A heat source formulation for arbitrary beam profiles; transient thermal history of core–ring profiles.", tr: "Keyfi ışın profilleri için ısı kaynağı formülasyonu; çekirdek–halka profillerinde geçici termal geçmiş." }
-  status: developing
-  tags: ["Fortran", "MSC Marc"]
-  github: ""
-  demo: ""
-  figure: ring
-  areas: [beam-shaping, thermal-simulation]
-  featured: true
-
 - id: signal-segmentation
   title: { en: "Semantic segmentation of detector signals", tr: "Dedektör sinyallerinde anlamsal bölütleme" }
   summary: { en: "Pairing a physics-based forward model with a learned mapping to extract process signatures.", tr: "Fizik tabanlı ileri modeli öğrenilmiş bir eşlemeyle eşleştirerek proses imzalarını çıkarmak." }
