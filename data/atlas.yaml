@@ -1,0 +1,13 @@
+# İmalat Atlası yapısı. Konu başlıkları daha sonra belirlenecek.
+# processes: yöntem ekseni    topics: konu ekseni    paths: öğrenme yolları
+processes: []
+#  - { id: additive, title: { en: "Additive manufacturing", tr: "Eklemeli imalat" } }
+#  - { id: casting, title: { en: "Casting", tr: "Döküm" } }
+topics: []
+#  - { id: simulation, title: { en: "Simulation", tr: "Simülasyon" } }
+paths: []
+#  - id: pbf-lb-intro
+#    title: { en: "Introduction to PBF-LB", tr: "PBF-LB'ye giriş" }
+#    level: { en: "Beginner", tr: "Başlangıç" }
+#    steps:
+#      - { guide: "atlas-scan-strategies" }     # rehberin translationKey değeri

@@ -1,0 +1,7 @@
+{{- /* İki dilli değer seçici: {en: "...", tr: "..."} ya da düz metin */ -}}
+{{- $v := .v -}}
+{{- $out := $v -}}
+{{- if reflect.IsMap $v -}}
+  {{- $out = index $v .lang | default (index $v "en") | default "" -}}
+{{- end -}}
+{{- return $out -}}

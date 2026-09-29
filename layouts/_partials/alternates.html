@@ -1,0 +1,21 @@
+{{- /* Sayfanın diğer dildeki karşılıklarını döndürür. Sözlük terimleri veri dosyasından eşlenir. */ -}}
+{{- $out := slice -}}
+{{- if .IsTranslated -}}
+  {{- $out = .Translations -}}
+{{- else if and (eq .Params.pagetype "glossary") .Params.termid -}}
+  {{- $id := .Params.termid -}}
+  {{- $lang := .Language.Lang -}}
+  {{- range site.Data.glossary.terms -}}
+    {{- if eq .id $id -}}
+      {{- $term := . -}}
+      {{- range site.Sites -}}
+        {{- if ne .Language.Lang $lang -}}
+          {{- $t := index $term .Language.Lang -}}
+          {{- $base := cond (eq .Language.Lang "tr") "/atlas/sozluk/" "/atlas/glossary/" -}}
+          {{- with .GetPage (printf "%s%s" $base $t.slug) -}}{{- $out = $out | append . -}}{{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

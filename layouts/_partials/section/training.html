@@ -1,0 +1,46 @@
+{{- $lang := site.Language.Lang }}
+{{- $email := site.Data.profile.email }}
+{{- $chip := dict "open" "chip--solid" "waitlist" "chip--acc" "planned" "chip--dashed" }}
+{{ partial "page-head.html" (dict "page" .) }}
+<section class="section">
+  <div class="wrap">
+    <div class="cards">
+      {{- range site.Data.training.offers }}
+      <article class="card offer">
+        <div class="card-body">
+          <div class="post-meta"><span class="chip {{ index $chip .status }}">{{ i18n (printf "status_%s" .status) }}</span><span class="chip">{{ i18n (printf "format_%s" .format) }}</span></div>
+          <h3>{{ partial "t.html" (dict "v" .title "lang" $lang) }}</h3>
+          <dl>
+            <dt>{{ i18n "audience" }}</dt><dd>{{ partial "t.html" (dict "v" .audience "lang" $lang) }}</dd>
+            <dt>{{ i18n "duration" }}</dt><dd>{{ partial "t.html" (dict "v" .duration "lang" $lang) }}</dd>
+          </dl>
+          {{- with index .topics $lang }}<ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap cta-grid">
+    <div class="cta" id="request">
+      <h2>{{ i18n "training_request" }}</h2>
+      <p>{{ i18n "training_request_text" }}</p>
+      {{- with site.Params.tallyTrainingForm }}
+      <a class="btn btn--solid" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "training_request" }} <span aria-hidden="true">↗</span></a>
+      <p class="alt">{{ i18n "or_email" }}: <a href="mailto:{{ $email }}">{{ $email }}</a></p>
+      {{- else }}
+      <a class="btn btn--solid" href="mailto:{{ $email }}?subject={{ i18n "training_request" | urlquery }}">{{ i18n "send_email" }} <span aria-hidden="true">→</span></a>
+      {{- end }}
+    </div>
+    <div class="cta" id="waitlist">
+      <h2>{{ i18n "training_waitlist" }}</h2>
+      <p>{{ i18n "training_waitlist_text" }}</p>
+      {{- with site.Params.tallyWaitlistForm }}
+      <a class="btn btn--line" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "training_waitlist" }} <span aria-hidden="true">↗</span></a>
+      {{- else }}
+      <a class="btn btn--line" href="mailto:{{ $email }}?subject={{ i18n "training_waitlist" | urlquery }}">{{ i18n "send_email" }} <span aria-hidden="true">→</span></a>
+      {{- end }}
+    </div>
+  </div>
+</section>

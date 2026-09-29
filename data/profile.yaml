@@ -1,0 +1,41 @@
+# Profil bilgileri. İki dilli alanlar "en:" ve "tr:" altında yazılır.
+name: "Ömer Safa Çavuş"
+alternateName: "Omer Safa Cavus"
+# Yayın listelerinde koyu gösterilecek yazar adı
+me: "Cavus, O. S."
+email: "cavusomersafa@gmail.com"
+location:
+  en: "Istanbul, Türkiye"
+  tr: "İstanbul, Türkiye"
+affiliation:
+  en: "Sabancı University"
+  tr: "Sabancı Üniversitesi"
+jobTitle:
+  en: "Manufacturing Engineer"
+  tr: "İmalat Mühendisi"
+kicker:
+  en: "manufacturing engineer · metal additive manufacturing"
+  tr: "imalat mühendisi · metal eklemeli imalat"
+lead:
+  en: "I build physics-based models for laser powder bed fusion: from part design to scan path, from thermal simulation to microstructure."
+  tr: "Toz yataklı lazer füzyon için fizik tabanlı modeller geliştiriyorum: parça tasarımından tarama yoluna, termal simülasyondan mikroyapıya kadar."
+availability:
+  en: "Open to projects and collaborations"
+  tr: "Projelere ve iş birliklerine açık"
+focus:
+  en: "PBF-LB · simulation"
+  tr: "PBF-LB · simülasyon"
+about:
+  en:
+    - "I am completing an Integrated Ph.D. in Manufacturing Engineering at Sabancı University. I developed an in-house parametric framework that connects part design, scan-path generation, thermal simulation and build-file export, and I validate my models with X-ray CT, XRD, SEM and mechanical testing."
+    - "At Machina3D I worked on additive manufacturing process design and aluminum casting. Today I work on beam shaping, machine learning for process monitoring, and other metal additive processes such as DED, cold spray and EBM."
+  tr:
+    - "Sabancı Üniversitesi'nde İmalat Mühendisliği bütünleşik doktoramı tamamlıyorum. Parça tasarımını, tarama yolu üretimini, termal simülasyonu ve makine dosyası çıktısını tek bir ortamda birleştiren parametrik bir çerçeve geliştirdim; modellerimi X-ışını BT, XRD, SEM ve mekanik testlerle doğruluyorum."
+    - "Machina3D'de eklemeli imalat proses tasarımı ve alüminyum döküm üzerine çalıştım. Bugün ışın şekillendirme, proses izleme için makine öğrenmesi ve DED, soğuk püskürtme, EBM gibi diğer metal eklemeli imalat yöntemleri üzerinde çalışıyorum."
+# Bağlantılar: url boş bırakılırsa gösterilmez.
+links:
+  - { name: "LinkedIn", url: "https://www.linkedin.com/in/cavusomersafa" }
+  - { name: "GitHub", url: "https://github.com/omersafacavus" }
+  - { name: "Google Scholar", url: "" }
+  - { name: "ORCID", url: "" }
+  - { name: "ResearchGate", url: "" }

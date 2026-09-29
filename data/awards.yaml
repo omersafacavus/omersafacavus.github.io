@@ -1,0 +1,20 @@
+# Ödüller ve eğitimler
+trainings:
+  intro:
+    en: "DIMAP (Direct Digital Manufacturing Platform) trainings, co-financed by the European Union and the Republic of Türkiye."
+    tr: "Avrupa Birliği ve Türkiye Cumhuriyeti tarafından ortak finanse edilen DIMAP (Doğrudan Dijital Üretim Platformu) eğitimleri."
+  items:
+    - { title: { en: "Directed Energy Deposition & Post Processes", tr: "Yönlendirilmiş Enerji Biriktirme ve Son İşlemler" }, by: "Politecnico di Milano · Prof. Ali Gökhan Demir", year: 2025 }
+    - { title: { en: "Practical Training on Cold Spray", tr: "Soğuk Püskürtme Uygulamalı Eğitimi" }, by: "Titomic · Ferdy Touwen", year: 2025 }
+    - { title: { en: "Theory of Cold Spray", tr: "Soğuk Püskürtme Teorisi" }, by: "Politecnico di Milano · Prof. Sara Bagherifard", year: 2025 }
+    - { title: { en: "Scanning Electron Microscopy", tr: "Taramalı Elektron Mikroskobu" }, by: "Zeiss · Volkan Erkut", year: 2025 }
+    - { title: { en: "Digital Simulation", tr: "Dijital Simülasyon" }, by: "Politecnico di Milano · Prof. Marco Grasso", year: 2025 }
+    - { title: { en: "Electron Beam Melting", tr: "Elektron Işını ile Ergitme" }, by: "Freemelt · Camilo Medina Viramontes", year: 2025 }
+    - { title: { en: "X-ray Diffraction (XRD)", tr: "X-ışını Kırınımı (XRD)" }, by: "Anka Analitik · Feda Rahal", year: 2025 }
+awards:
+  - { title: { en: "Performance Scholarship", tr: "Performans Bursu" }, by: "TÜBİTAK", year: 2024 }
+  - { title: { en: "Project Scholarship", tr: "Proje Bursu" }, by: "TÜBİTAK", year: 2020 }
+  - { title: { en: "High Honour List", tr: "Yüksek Onur Listesi" }, by: { en: "Istanbul Technical University", tr: "İstanbul Teknik Üniversitesi" }, year: 2018 }
+  - { title: { en: "Erasmus+ Exchange Grant", tr: "Erasmus+ Değişim Hibesi" }, by: { en: "European Union", tr: "Avrupa Birliği" }, year: 2018 }
+  - { title: { en: "A2 German Language Certificate", tr: "A2 Almanca Dil Sertifikası" }, by: "Goethe-Institut", year: 2017 }
+  - { title: { en: "Certificate of Appreciation", tr: "Teşekkür Belgesi" }, by: "UNICEF", year: 2017 }

@@ -1,0 +1,78 @@
+# Açık kaynak araçlar ve veri setleri.
+# Aynı dosyadan sitedeki Kaynaklar sayfası ve GitHub için README.md (EN ve TR) üretilir:
+#   /resources/README.md   ve   /tr/kaynaklar/README.md
+# category: kategori kimliği (aşağıdaki categories listesinden)
+# process:  additive | casting | machining | forming | joining | heat-treatment | general
+categories:
+  - { id: slicing, title: { en: "Slicing and scan-path generation", tr: "Dilimleme ve tarama yolu üretimi" } }
+  - { id: process-simulation, title: { en: "Process simulation", tr: "Proses simülasyonu" } }
+  - { id: microstructure, title: { en: "Microstructure simulation", tr: "Mikroyapı simülasyonu" } }
+  - { id: workflows, title: { en: "Workflows and data", tr: "İş akışları ve veri" } }
+  - { id: datasets, title: { en: "Datasets and benchmarks", tr: "Veri setleri ve karşılaştırma testleri" } }
+
+items:
+  - name: "PySLM"
+    url: "https://github.com/drlukeparry/pyslm"
+    category: slicing
+    process: additive
+    license: "LGPL-2.1"
+    platform: "Python"
+    description:
+      en: "Python library for slicing, hatching, support generation and build-file formats for laser powder bed fusion."
+      tr: "Toz yataklı lazer füzyon için dilimleme, tarama deseni, destek üretimi ve makine dosyası biçimleri sunan Python kütüphanesi."
+    added: 2026-09-28
+
+  - name: "AdditiveFOAM"
+    url: "https://github.com/ORNL/AdditiveFOAM"
+    category: process-simulation
+    process: additive
+    license: "GPL-3.0"
+    platform: "C++ · OpenFOAM"
+    description:
+      en: "Continuum heat and mass transfer code for additive manufacturing built on OpenFOAM, developed at Oak Ridge National Laboratory."
+      tr: "Oak Ridge Ulusal Laboratuvarı'nın OpenFOAM üzerine geliştirdiği, eklemeli imalat için ısı ve kütle transferi kodu."
+    added: 2026-09-28
+
+  - name: "SPPARKS"
+    url: "https://spparks.github.io/"
+    category: microstructure
+    process: additive
+    license: "GPL"
+    platform: "C++"
+    description:
+      en: "Sandia's parallel kinetic Monte Carlo code, with Potts applications for additive manufacturing and welding microstructures."
+      tr: "Sandia'nın paralel kinetik Monte Carlo kodu; eklemeli imalat ve kaynak mikroyapıları için Potts uygulamaları içerir."
+    added: 2026-09-28
+
+  - name: "ExaCA"
+    url: "https://github.com/LLNL/ExaCA"
+    category: microstructure
+    process: additive
+    license: "MIT"
+    platform: "C++ · Kokkos"
+    description:
+      en: "Cellular automata code for alloy nucleation and solidification under additive manufacturing conditions."
+      tr: "Eklemeli imalat koşullarında alaşım çekirdeklenmesi ve katılaşması için hücresel otomat kodu."
+    added: 2026-09-28
+
+  - name: "Myna"
+    url: "https://github.com/ORNL-MDF/Myna"
+    category: workflows
+    process: additive
+    license: "BSD-3-Clause"
+    platform: "Python"
+    description:
+      en: "Framework for additive manufacturing modeling and simulation workflows driven by build data."
+      tr: "Üretim verisine dayalı eklemeli imalat modelleme ve simülasyon iş akışları için çerçeve."
+    added: 2026-09-28
+
+  - name: "NIST AM Bench"
+    url: "https://www.nist.gov/ambench"
+    category: datasets
+    process: additive
+    license: { en: "Public data", tr: "Açık veri" }
+    platform: { en: "Datasets", tr: "Veri setleri" }
+    description:
+      en: "Highly controlled benchmark measurements and modeling challenge problems for validating additive manufacturing simulations."
+      tr: "Eklemeli imalat simülasyonlarını doğrulamak için kontrollü karşılaştırma ölçümleri ve modelleme problemleri."
+    added: 2026-09-28

@@ -1,0 +1,29 @@
+{{- $lang := site.Language.Lang }}
+{{- $other := cond (eq $lang "tr") "en" "tr" }}
+<div class="atlas-page">
+{{ partial "atlas-bar.html" . }}
+<header class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="{{ (site.GetPage "/atlas").RelPermalink }}">Atlas</a><span aria-hidden="true">/</span></nav>
+    <h1>{{ i18n "glossary_title" }}</h1>
+    {{- with .Description }}<p>{{ . }}</p>{{ end }}
+  </div>
+</header>
+<div class="wrap article">
+  {{- $pages := sort .RegularPages "Title" }}
+  {{- if $pages }}
+  <ul class="terms" data-terms>
+    {{- range $pages }}
+    {{- $d := partial "term-data.html" .Params.termid }}
+    {{- $alt := index $d $other }}
+    <li data-search="{{ .Title }} {{ $alt.term }} {{ $d.abbr }} {{ with $d.synonyms }}{{ delimit (index . $lang | default slice) " " }}{{ end }}">
+      <div><a class="t" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with $d.abbr }} <span class="chip">{{ . }}</span>{{ end }}<span class="alt" lang="{{ $other }}">{{ $alt.term }}</span></div>
+      <p>{{ .Params.description }}</p>
+    </li>
+    {{- end }}
+  </ul>
+  {{- else }}
+  {{ partial "empty.html" (i18n "glossary_empty") }}
+  {{- end }}
+</div>
+</div>

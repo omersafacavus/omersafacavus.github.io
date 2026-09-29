@@ -1,0 +1,17 @@
+{{- /* .featured: yalnızca öne çıkanlar */ -}}
+{{- $all := site.Data.publications }}
+{{- if .featured }}{{ $all = where $all "featured" true }}{{ end }}
+{{- $journals := sort (where $all "type" "journal") "year" "desc" }}
+{{- $confs := sort (where $all "type" "conference") "year" "desc" }}
+{{- with $journals }}
+<div class="pub-group">
+  <span class="label">{{ i18n "journal_papers" }} — {{ len . }}</span>
+  <ol class="pubs" reversed>{{ range . }}{{ partial "pub-item.html" (dict "pub" .) }}{{ end }}</ol>
+</div>
+{{- end }}
+{{- with $confs }}
+<div class="pub-group">
+  <span class="label">{{ i18n "conference_papers" }} — {{ len . }}</span>
+  <ol class="pubs" reversed>{{ range . }}{{ partial "pub-item.html" (dict "pub" .) }}{{ end }}</ol>
+</div>
+{{- end }}

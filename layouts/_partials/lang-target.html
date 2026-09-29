@@ -1,0 +1,14 @@
+{{- /* Dil düğmesinin hedefi: sayfanın çevirisi, yoksa bölümün çevirisi, yoksa diğer dilin ana sayfası */ -}}
+{{- $target := false -}}
+{{- $alts := partial "alternates.html" . -}}
+{{- with index $alts 0 -}}{{- $target = . -}}{{- end -}}
+{{- if not $target -}}
+  {{- with .CurrentSection -}}{{- with index .Translations 0 -}}{{- $target = . -}}{{- end -}}{{- end -}}
+{{- end -}}
+{{- if not $target -}}
+  {{- with .FirstSection -}}{{- with index .Translations 0 -}}{{- $target = . -}}{{- end -}}{{- end -}}
+{{- end -}}
+{{- if not $target -}}
+  {{- with site.Home.Translations -}}{{- $target = index . 0 -}}{{- end -}}
+{{- end -}}
+{{- return $target -}}

@@ -1,0 +1,32 @@
+# Deneyim — "end: ''" bugün anlamına gelir.
+- org: "Machina3D"
+  role: { en: "R&D Engineer", tr: "Ar-Ge Mühendisi" }
+  start: "2024"
+  end: "2026"
+  items:
+    en:
+      - "Additive manufacturing: end-to-end process design including part-scale thermal analysis, support structure engineering and DfAM-based geometry optimization."
+      - "Casting: developed in-house software for automated mold generation; research on heat treatment recipes and material characterization of aluminum alloys."
+    tr:
+      - "Eklemeli imalat: parça ölçeğinde termal analiz, destek yapısı mühendisliği ve DfAM ilkelerine dayalı geometri optimizasyonunu içeren uçtan uca proses tasarımı."
+      - "Döküm: otomatik kalıp üretimi için kurum içi yazılım geliştirme; alüminyum alaşımlarında ısıl işlem reçeteleri ve malzeme karakterizasyonu araştırmaları."
+- org: { en: "Sabancı University Integrated Manufacturing Technologies Research and Application Center (SU-IMC)", tr: "Sabancı Üniversitesi Entegre İmalat Teknolojileri Araştırma ve Uygulama Merkezi (SU-IMC)" }
+  role: { en: "Researcher", tr: "Araştırmacı" }
+  start: "2020"
+  end: ""
+  items:
+    en:
+      - "New Generation 3D Printing Manufacturing Technologies Platform (2023–present). Partners: TÜBİTAK, Sabancı University, ROKETSAN."
+      - "Development and Experimental Validation of Innovative Topology Optimization Algorithms Supported by Numerical Models (2020–2023). Partners: TÜBİTAK, Sabancı University, TEI."
+    tr:
+      - "Yeni Nesil 3B Baskı İmalat Teknolojileri Platformu (2023–bugün). Ortaklar: TÜBİTAK, Sabancı Üniversitesi, ROKETSAN."
+      - "Sayısal Modellerle Desteklenen Yenilikçi Topoloji Optimizasyonu Algoritmalarının Geliştirilmesi ve Deneysel Doğrulaması (2020–2023). Ortaklar: TÜBİTAK, Sabancı Üniversitesi, TEI."
+- org: { en: "Sabancı University", tr: "Sabancı Üniversitesi" }
+  role: { en: "Teaching Assistant", tr: "Araştırma ve Öğretim Asistanı" }
+  start: "2020"
+  end: ""
+  items:
+    en:
+      - "Additive Manufacturing; Manufacturing Processes I; Introduction to Computer-Aided Drafting and Solid Modeling with SolidWorks."
+    tr:
+      - "Eklemeli İmalat; İmalat Süreçleri I; SolidWorks ile Bilgisayar Destekli Çizim ve Katı Modellemeye Giriş."

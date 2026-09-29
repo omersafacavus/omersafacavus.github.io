@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{- $en := index site.Sites 0 }}{{ $tr := index site.Sites 1 }}
+<section class="nf">
+  <div class="wrap">
+    <div lang="tr">
+      <p class="kicker">404</p>
+      <h1>Sayfa bulunamadı</h1>
+      <p>Aradığınız sayfa taşınmış olabilir.</p>
+      <a class="btn btn--solid" href="{{ $tr.Home.RelPermalink }}">Ana sayfaya dön <span aria-hidden="true">→</span></a>
+    </div>
+    <div lang="en">
+      <p class="kicker">404</p>
+      <h1>Page not found</h1>
+      <p>The page you are looking for may have moved.</p>
+      <a class="btn btn--line" href="{{ $en.Home.RelPermalink }}">Back to home <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+{{ end }}

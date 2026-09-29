@@ -1,0 +1,22 @@
+{{- $p := site.Data.profile }}
+{{- $lang := site.Language.Lang }}
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div class="kicker">{{ i18n "contact" }}</div>
+      <a class="email" href="mailto:{{ $p.email }}">{{ $p.email }}</a>
+      <div class="social">
+        {{- range $p.links }}{{ if .url }}<a href="{{ .url }}" rel="me noopener" target="_blank">{{ .name }} ↗</a>{{ end }}{{ end }}
+      </div>
+    </div>
+    {{ partial "newsletter.html" (dict "id" "footer-newsletter") }}
+    <div class="foot-meta">
+      <span>© {{ now.Year }} {{ $p.name }}</span>
+      <nav aria-label="Footer">
+        {{- with site.Home.OutputFormats.Get "rss" }}<a href="{{ .RelPermalink }}">{{ i18n "rss" }}</a>{{ end }}
+        {{- with partial "lang-target.html" . }}<a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}" lang="{{ .Language.LanguageCode }}">{{ .Language.LanguageName }}</a>{{ end }}
+        <a href="{{ "sitemap.xml" | absURL }}">{{ i18n "footer_sitemap" }}</a>
+      </nav>
+    </div>
+  </div>
+</footer>

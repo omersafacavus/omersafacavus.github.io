@@ -1,0 +1,6 @@
+{{ partial "page-head.html" (dict "page" .) }}
+<div class="wrap article">
+  <div class="cards">
+    {{- range site.Data.projects }}{{ partial "project-card.html" (dict "p" .) }}{{ end }}
+  </div>
+</div>

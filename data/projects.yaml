@@ -1,0 +1,36 @@
+# Projeler
+# status: live | developing | planned   (yayında | geliştiriliyor | planlanıyor)
+# github / demo: boşsa gösterilmez.
+# figure: kart üstündeki çizim — hatch | ring | signal | none
+- id: parametric-slicer
+  title: { en: "Parametric slicer and design–simulation framework", tr: "Parametrik dilimleyici ve tasarım–simülasyon çerçevesi" }
+  summary: { en: "An end-to-end environment from part geometry to scan paths, from simulation inputs to build-machine files.", tr: "Parça geometrisinden tarama yollarına, termal simülasyon girdilerinden makine dosyasına uçtan uca ortam." }
+  status: developing
+  tags: ["C#", "Rhino", "Grasshopper"]
+  github: ""
+  demo: ""
+  figure: hatch
+  areas: [scan-strategies, thermal-simulation]
+  featured: true
+
+- id: beam-shaping-heat-source
+  title: { en: "Parametric heat source for beam shaping", tr: "Işın şekillendirme için parametrik ısı kaynağı" }
+  summary: { en: "A heat source formulation for arbitrary beam profiles; transient thermal history of core–ring profiles.", tr: "Keyfi ışın profilleri için ısı kaynağı formülasyonu; çekirdek–halka profillerinde geçici termal geçmiş." }
+  status: developing
+  tags: ["Fortran", "MSC Marc"]
+  github: ""
+  demo: ""
+  figure: ring
+  areas: [beam-shaping, thermal-simulation]
+  featured: true
+
+- id: signal-segmentation
+  title: { en: "Semantic segmentation of detector signals", tr: "Dedektör sinyallerinde anlamsal bölütleme" }
+  summary: { en: "Pairing a physics-based forward model with a learned mapping to extract process signatures.", tr: "Fizik tabanlı ileri modeli öğrenilmiş bir eşlemeyle eşleştirerek proses imzalarını çıkarmak." }
+  status: developing
+  tags: ["Python", "U-Net", "DeepLab"]
+  github: ""
+  demo: ""
+  figure: signal
+  areas: [machine-learning]
+  featured: true

@@ -1,0 +1,4 @@
+{{ define "main" }}
+{{ partial "page-head.html" (dict "page" . "kicker" (i18n "tags")) }}
+<div class="wrap article">{{ partial "post-list.html" (dict "posts" .Pages) }}</div>
+{{ end }}

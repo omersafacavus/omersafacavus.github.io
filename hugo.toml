@@ -1,0 +1,148 @@
+# ─────────────────────────────────────────────────────────────
+#  Ömer Safa Çavuş — kişisel site ve İmalat Atlası
+#  Kendi alan adınıza geçtiğinizde yalnızca baseURL'i değiştirin.
+# ─────────────────────────────────────────────────────────────
+baseURL = "https://omersafacavus.github.io/"
+title = "Ömer Safa Çavuş"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+timeZone = "Europe/Istanbul"
+
+[params]
+  author = "Ömer Safa Çavuş"
+  # Google Search Console → "HTML etiketi" doğrulamasındaki content değeri
+  googleSiteVerification = ""
+  # Buttondown kullanıcı adınız (ör. "cavusomersafa"). Boşsa bülten formu e-posta bağlantısına döner.
+  buttondownUser = ""
+  # Tally form bağlantıları (ör. "https://tally.so/r/xxxxxx"). Boşsa e-posta bağlantısı gösterilir.
+  tallyTrainingForm = ""
+  tallyWaitlistForm = ""
+  # static/cv/ klasöründeki PDF
+  cvFile = "cv/Omer-Safa-Cavus-CV.pdf"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    contentDir = "content/en"
+    weight = 1
+    title = "Ömer Safa Çavuş — Manufacturing Engineer"
+    [languages.en.params]
+      description = "Manufacturing engineer building physics-based models for metal additive manufacturing and laser powder bed fusion: scan strategies, thermal simulation, microstructure and machine learning."
+      atlasName = "Manufacturing Atlas"
+    [[languages.en.menus.main]]
+      identifier = "publications"
+      name = "Publications"
+      pageRef = "/publications"
+      weight = 10
+    [[languages.en.menus.main]]
+      identifier = "projects"
+      name = "Projects"
+      pageRef = "/projects"
+      weight = 20
+    [[languages.en.menus.main]]
+      identifier = "blog"
+      name = "Blog"
+      pageRef = "/blog"
+      weight = 30
+    [[languages.en.menus.main]]
+      identifier = "atlas"
+      name = "Atlas"
+      pageRef = "/atlas"
+      weight = 40
+    [[languages.en.menus.main]]
+      identifier = "resources"
+      name = "Resources"
+      pageRef = "/resources"
+      weight = 50
+    [[languages.en.menus.main]]
+      identifier = "training"
+      name = "Training"
+      pageRef = "/training"
+      weight = 60
+    [languages.en.permalinks.taxonomy]
+      tags = "/blog/tags/"
+    [languages.en.permalinks.term]
+      tags = "/blog/tags/:slug/"
+  [languages.tr]
+    languageName = "Türkçe"
+    languageCode = "tr"
+    contentDir = "content/tr"
+    weight = 2
+    title = "Ömer Safa Çavuş — İmalat Mühendisi"
+    [languages.tr.params]
+      description = "Metal eklemeli imalat ve toz yataklı lazer füzyon (metal 3D baskı) için fizik tabanlı modeller geliştiren imalat mühendisi: tarama stratejileri, termal simülasyon, mikroyapı ve makine öğrenmesi."
+      atlasName = "İmalat Atlası"
+    [[languages.tr.menus.main]]
+      identifier = "publications"
+      name = "Yayınlar"
+      pageRef = "/yayinlar"
+      weight = 10
+    [[languages.tr.menus.main]]
+      identifier = "projects"
+      name = "Projeler"
+      pageRef = "/projeler"
+      weight = 20
+    [[languages.tr.menus.main]]
+      identifier = "blog"
+      name = "Yazılar"
+      pageRef = "/yazilar"
+      weight = 30
+    [[languages.tr.menus.main]]
+      identifier = "atlas"
+      name = "Atlas"
+      pageRef = "/atlas"
+      weight = 40
+    [[languages.tr.menus.main]]
+      identifier = "resources"
+      name = "Kaynaklar"
+      pageRef = "/kaynaklar"
+      weight = 50
+    [[languages.tr.menus.main]]
+      identifier = "training"
+      name = "Eğitimler"
+      pageRef = "/egitimler"
+      weight = 60
+    [languages.tr.permalinks.taxonomy]
+      tags = "/yazilar/etiket/"
+    [languages.tr.permalinks.term]
+      tags = "/yazilar/etiket/:slug/"
+
+[taxonomies]
+  tag = "tags"
+
+[outputFormats]
+  [outputFormats.RSS]
+    baseName = "feed"
+  [outputFormats.awesome]
+    mediaType = "text/markdown"
+    baseName = "README"
+    isPlainText = true
+    notAlternative = true
+
+[mediaTypes]
+  [mediaTypes."text/markdown"]
+    suffixes = ["md"]
+
+[outputs]
+  home = ["html", "rss"]
+  section = ["html"]
+  taxonomy = ["html"]
+  term = ["html"]
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+  [markup.highlight]
+    noClasses = false
+
+[sitemap]
+  changeFreq = "monthly"
+  priority = 0.5
+
+[minify]
+  minifyOutput = true

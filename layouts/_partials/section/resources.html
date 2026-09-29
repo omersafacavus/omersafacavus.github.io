@@ -1,0 +1,23 @@
+{{- $lang := site.Language.Lang }}
+{{- $r := site.Data.resources }}
+{{ partial "page-head.html" (dict "page" .) }}
+<div class="wrap article">
+  {{- range $r.categories }}
+  {{- $cat := . }}
+  {{- $items := where $r.items "category" $cat.id }}
+  {{- with $items }}
+  <section class="res-group" aria-labelledby="cat-{{ $cat.id }}">
+    <h2 class="label label-block" id="cat-{{ $cat.id }}">{{ partial "t.html" (dict "v" $cat.title "lang" $lang) }} — {{ len . }}</h2>
+    <ul class="res">
+      {{- range sort . "name" }}
+      <li>
+        <div class="name"><a href="{{ .url }}" rel="noopener">{{ .name }}</a></div>
+        <p>{{ partial "t.html" (dict "v" .description "lang" $lang) }}</p>
+        <div class="meta"><span>{{ partial "t.html" (dict "v" .platform "lang" $lang) }}</span><span>{{ partial "t.html" (dict "v" .license "lang" $lang) }}</span></div>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+  {{- end }}
+</div>

@@ -1,0 +1,24 @@
+{{- $lang := site.Language.Lang }}
+{{- $other := cond (eq $lang "tr") "en" "tr" }}
+{{- $d := partial "term-data.html" .Params.termid }}
+<div class="atlas-page">
+{{ partial "atlas-bar.html" . }}
+<header class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="{{ (site.GetPage "/atlas").RelPermalink }}">Atlas</a><span aria-hidden="true">/</span><a href="{{ .Parent.RelPermalink }}">{{ i18n "glossary" }}</a><span aria-hidden="true">/</span></nav>
+    <h1>{{ .Title }}</h1>
+  </div>
+</header>
+<div class="wrap article">
+  <div class="term-card">
+    <div class="prose">{{ .Content }}</div>
+    <dl>
+      <dt>{{ cond (eq $lang "tr") (i18n "in_english") (i18n "in_turkish") }}</dt>
+      <dd lang="{{ $other }}">{{ with index (partial "alternates.html" .) 0 }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ else }}{{ (index $d $other).term }}{{ end }}</dd>
+      {{- with $d.abbr }}<dt>{{ i18n "abbreviation" }}</dt><dd>{{ . }}</dd>{{ end }}
+      {{- with $d.synonyms }}{{ with index . $lang }}<dt>{{ i18n "synonyms" }}</dt><dd>{{ delimit . ", " }}</dd>{{ end }}{{ end }}
+      {{- with $d.see }}<dt>{{ i18n "see_also" }}</dt><dd>{{ range $i, $id := . }}{{ with partial "term-url.html" $id }}{{ if $i }}, {{ end }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ end }}</dd>{{ end }}
+    </dl>
+  </div>
+</div>
+</div>

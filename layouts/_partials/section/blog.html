@@ -1,0 +1,4 @@
+{{ partial "page-head.html" (dict "page" .) }}
+<div class="wrap article">
+  {{ partial "post-list.html" (dict "posts" .RegularPages.ByDate.Reverse) }}
+</div>

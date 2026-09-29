@@ -1,0 +1,13 @@
+{{- $posts := .posts }}
+{{- if $posts }}
+<ul class="post-list">
+  {{- range $posts }}
+  <li>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
+    <div><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>{{ with .Description }}<p>{{ . }}</p>{{ end }}</div>
+  </li>
+  {{- end }}
+</ul>
+{{- else }}
+{{ partial "empty.html" (i18n "no_posts") }}
+{{- end }}

@@ -1,0 +1,5 @@
+{{ partial "page-head.html" (dict "page" .) }}
+<div class="wrap article">
+  <div class="prose">{{ .Content }}</div>
+  {{ partial "post-list.html" (dict "posts" .RegularPages) }}
+</div>

@@ -1,0 +1,5 @@
+<div class="sec-head">
+  {{- with .num }}<span class="num">{{ . }}</span>{{ end }}
+  <h2 id="{{ .id }}">{{ .title }}</h2>
+  {{- if .link }}<span class="rule" aria-hidden="true"></span><a class="link-more" href="{{ .link }}">{{ .linktext }} <span aria-hidden="true">→</span></a>{{ end }}
+</div>

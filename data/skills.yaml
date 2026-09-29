@@ -1,0 +1,14 @@
+- group: { en: "Additive manufacturing", tr: "Eklemeli imalat" }
+  items: ["Materialise Magics", "Simufact Additive", "Netfabb", "EOS M 290 (PBF-LB)", "Freemelt ONE (PBF-EB)", "Titomic PCS-100 (cold spray)"]
+- group: { en: "Finite element analysis", tr: "Sonlu elemanlar analizi" }
+  items: ["MSC Marc", "ANSYS Workbench", { en: "User subroutines", tr: "Kullanıcı alt programları" }]
+- group: { en: "Characterization and microstructure", tr: "Karakterizasyon ve mikroyapı" }
+  items: ["XRD", { en: "X-ray CT", tr: "X-ışını BT" }, "SEM", { en: "Optical microscopy", tr: "Optik mikroskopi" }, "SPPARKS kMC"]
+- group: { en: "Programming", tr: "Programlama" }
+  items: ["MATLAB", "Python", "C#", "Fortran", "LaTeX"]
+- group: { en: "Design", tr: "Tasarım" }
+  items: [{ en: "Parametric modeling", tr: "Parametrik modelleme" }, "Rhinoceros / Grasshopper", "SolidWorks"]
+- group: { en: "Topology optimization", tr: "Topoloji optimizasyonu" }
+  items: ["MSC Apex", "Fusion 360", "ANSYS Workbench", "nTop"]
+- group: { en: "Languages", tr: "Diller" }
+  items: [{ en: "Turkish (native)", tr: "Türkçe (ana dil)" }, { en: "English (fluent)", tr: "İngilizce (akıcı)" }, { en: "German (elementary)", tr: "Almanca (başlangıç)" }]

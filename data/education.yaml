@@ -1,0 +1,19 @@
+- org: { en: "Sabancı University", tr: "Sabancı Üniversitesi" }
+  degree: { en: "Ph.D. in Manufacturing Engineering", tr: "Doktora, İmalat Mühendisliği" }
+  start: "2020"
+  end: ""
+  note:
+    en: "Thesis: Planning and analysis of laser beam powder bed fusion processes. Supervisor: Prof. Dr. Bahattin Koç."
+    tr: "Tez: Lazer ışınlı toz yataklı füzyon proseslerinin planlanması ve analizi. Danışman: Prof. Dr. Bahattin Koç."
+- org: { en: "Istanbul Technical University", tr: "İstanbul Teknik Üniversitesi" }
+  degree: { en: "B.Sc. in Civil Engineering", tr: "Lisans, İnşaat Mühendisliği" }
+  start: "2014"
+  end: "2020"
+  note:
+    en: "Graduation project on strengthening ageing and damaged concrete and masonry structures with FRCM."
+    tr: "Bitirme projesi: Yaşlanmış ve hasarlı betonarme ve yığma yapıların FRCM ile güçlendirilmesi."
+- org: { en: "Hamburg University of Technology", tr: "Hamburg Teknik Üniversitesi" }
+  degree: { en: "Erasmus+ exchange, Civil Engineering", tr: "Erasmus+ değişim programı, İnşaat Mühendisliği" }
+  start: "2018"
+  end: "2018"
+  note: { en: "", tr: "" }

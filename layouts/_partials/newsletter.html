@@ -1,0 +1,16 @@
+{{- $user := site.Params.buttondownUser }}
+{{- $id := .id | default "newsletter-email" }}
+<div class="newsletter">
+  <h2>{{ i18n "newsletter" }}</h2>
+  <p>{{ i18n "newsletter_text" }}</p>
+  {{- if $user }}
+  <form class="field" action="https://buttondown.com/api/emails/embed-subscribe/{{ $user }}" method="post" target="_blank">
+    <label class="visually-hidden" for="{{ $id }}">{{ i18n "newsletter_label" }}</label>
+    <input id="{{ $id }}" type="email" name="email" required autocomplete="email" placeholder="{{ i18n "newsletter_placeholder" }}">
+    <input type="hidden" name="tag" value="{{ site.Language.Lang }}">
+    <button class="btn btn--solid" type="submit">{{ i18n "subscribe" }}</button>
+  </form>
+  {{- else }}
+  <div><a class="btn btn--solid" href="mailto:{{ site.Data.profile.email }}?subject={{ i18n "newsletter" | urlquery }}">{{ i18n "subscribe" }} <span aria-hidden="true">→</span></a></div>
+  {{- end }}
+</div>

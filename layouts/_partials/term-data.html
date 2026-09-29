@@ -1,0 +1,4 @@
+{{- $out := dict -}}
+{{- $id := . -}}
+{{- range site.Data.glossary.terms }}{{ if eq .id $id }}{{ $out = . }}{{ end }}{{ end -}}
+{{- return $out -}}

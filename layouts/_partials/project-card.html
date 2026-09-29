@@ -1,0 +1,16 @@
+{{- $p := .p }}{{ $lang := site.Language.Lang }}
+{{- $chip := dict "live" "chip--solid" "developing" "chip--acc" "planned" "chip--dashed" }}
+<article class="card">
+  {{- if and $p.figure (ne $p.figure "none") }}
+  <div class="card-fig">{{ partial (printf "fig/%s.html" $p.figure) . }}</div>
+  {{- end }}
+  <div class="card-body">
+    <span class="chip {{ index $chip $p.status }}">{{ i18n (printf "status_%s" $p.status) }}</span>
+    <h3>{{ partial "t.html" (dict "v" $p.title "lang" $lang) }}</h3>
+    <p>{{ partial "t.html" (dict "v" $p.summary "lang" $lang) }}</p>
+    <div class="card-foot">
+      <span>{{ delimit $p.tags " · " }}</span>
+      <span>{{ with $p.demo }}<a href="{{ . }}">Demo ↗</a> {{ end }}{{ with $p.github }}<a href="{{ . }}">GitHub ↗</a>{{ end }}</span>
+    </div>
+  </div>
+</article>

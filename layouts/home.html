@@ -1,0 +1,149 @@
+{{ define "main" }}
+{{- $lang := site.Language.Lang }}
+{{- $p := site.Data.profile }}
+{{- $t := dict "lang" $lang }}
+{{- $pubs := site.GetPage (cond (eq $lang "tr") "/yayinlar" "/publications") }}
+{{- $projects := site.GetPage (cond (eq $lang "tr") "/projeler" "/projects") }}
+{{- $blog := site.GetPage (cond (eq $lang "tr") "/yazilar" "/blog") }}
+
+<section class="hero" aria-labelledby="hero-name">
+  <div class="wrap">
+    <p class="kicker">{{ partial "t.html" (merge $t (dict "v" $p.kicker)) }}</p>
+    <h1 id="hero-name">{{ $p.name | replaceRE "^(\\S+\\s+\\S+)\\s+" "$1<br>" | safeHTML }}</h1>
+    <div class="hero-row">
+      <p class="hero-lead">{{ partial "t.html" (merge $t (dict "v" $p.lead)) }}</p>
+      <div class="hero-actions">
+        <a class="btn btn--solid" href="mailto:{{ $p.email }}">{{ i18n "send_email" }} <span aria-hidden="true">→</span></a>
+        <a class="btn btn--line" href="{{ site.Params.cvFile | relURL }}" download>{{ i18n "download_cv" }} <span class="btn-meta">PDF</span></a>
+      </div>
+    </div>
+    <div class="strip">
+      <div><span class="k">{{ i18n "status" }}</span><span><span class="dot" aria-hidden="true"></span>{{ partial "t.html" (merge $t (dict "v" $p.availability)) }}</span></div>
+      <div><span class="k">{{ i18n "affiliation" }}</span><span>{{ partial "t.html" (merge $t (dict "v" $p.affiliation)) }}</span></div>
+      <div><span class="k">{{ i18n "location" }}</span><span>{{ partial "t.html" (merge $t (dict "v" $p.location)) }}</span></div>
+      <div><span class="k">{{ i18n "focus" }}</span><span>{{ partial "t.html" (merge $t (dict "v" $p.focus)) }}</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="about">
+  <div class="wrap split">
+    {{ partial "sec-head.html" (dict "num" "01" "id" "about" "title" (i18n "about")) }}
+    <div class="split-body prose-lg">
+      {{- range index $p.about $lang }}<p>{{ . }}</p>{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="research">
+  <div class="wrap">
+    {{ partial "sec-head.html" (dict "num" "02" "id" "research" "title" (i18n "research")) }}
+    <div class="cells">
+      {{- range $i, $r := site.Data.research }}
+      <div class="cell">
+        <span class="idx">2.{{ add $i 1 }}</span>
+        <h3>{{ partial "t.html" (merge $t (dict "v" $r.title)) }}</h3>
+        <p>{{ partial "t.html" (merge $t (dict "v" $r.summary)) }}</p>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="projects">
+  <div class="wrap">
+    {{ partial "sec-head.html" (dict "num" "03" "id" "projects" "title" (i18n "projects") "link" $projects.RelPermalink "linktext" (i18n "all_projects")) }}
+    <div class="cards">
+      {{- range where site.Data.projects "featured" true }}{{ partial "project-card.html" (dict "p" .) }}{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="publications">
+  <div class="wrap">
+    {{ partial "sec-head.html" (dict "num" "04" "id" "publications" "title" (i18n "publications") "link" $pubs.RelPermalink "linktext" (i18n "all_publications")) }}
+    {{ partial "pub-list.html" (dict "featured" true) }}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="experience">
+  <div class="wrap split">
+    {{ partial "sec-head.html" (dict "num" "05" "id" "experience" "title" (i18n "experience")) }}
+    <ol class="split-body rows">
+      {{- range site.Data.experience }}
+      <li class="row">
+        <span class="when">{{ .start }} — {{ .end | default (i18n "present") }}</span>
+        <div>
+          <h3>{{ partial "t.html" (merge $t (dict "v" .role)) }}</h3>
+          <div class="org">{{ partial "t.html" (merge $t (dict "v" .org)) }}</div>
+          {{- with index .items $lang }}<ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+        </div>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="education">
+  <div class="wrap split">
+    {{ partial "sec-head.html" (dict "num" "06" "id" "education" "title" (i18n "education")) }}
+    <ol class="split-body rows">
+      {{- range site.Data.education }}
+      <li class="row">
+        <span class="when">{{ if eq .start .end }}{{ .start }}{{ else }}{{ .start }} — {{ .end | default (i18n "present") }}{{ end }}</span>
+        <div>
+          <h3>{{ partial "t.html" (merge $t (dict "v" .degree)) }}</h3>
+          <div class="org">{{ partial "t.html" (merge $t (dict "v" .org)) }}</div>
+          {{- with partial "t.html" (merge $t (dict "v" .note)) }}<p class="note">{{ . }}</p>{{ end }}
+        </div>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="skills">
+  <div class="wrap split">
+    {{ partial "sec-head.html" (dict "num" "07" "id" "skills" "title" (i18n "skills")) }}
+    <div class="split-body skills">
+      {{- range site.Data.skills }}
+      <div class="skill">
+        <span class="label">{{ partial "t.html" (merge $t (dict "v" .group)) }}</span>
+        <ul>{{ range .items }}<li>{{ partial "t.html" (merge $t (dict "v" .)) }}</li>{{ end }}</ul>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="awards">
+  <div class="wrap split">
+    {{ partial "sec-head.html" (dict "num" "08" "id" "awards" "title" (i18n "awards_trainings")) }}
+    <div class="split-body">
+      {{- with site.Data.awards }}
+      <span class="label label-block">{{ i18n "trainings" }}</span>
+      <p class="awards-intro">{{ partial "t.html" (merge $t (dict "v" .trainings.intro)) }}</p>
+      <ul class="mini">
+        {{- range .trainings.items }}
+        <li><div>{{ partial "t.html" (merge $t (dict "v" .title)) }}<div class="by">{{ partial "t.html" (merge $t (dict "v" .by)) }}</div></div><span class="yr">{{ .year }}</span></li>
+        {{- end }}
+      </ul>
+      <span class="label label-block">{{ i18n "awards" }}</span>
+      <ul class="mini">
+        {{- range .awards }}
+        <li><div>{{ partial "t.html" (merge $t (dict "v" .title)) }}<div class="by">{{ partial "t.html" (merge $t (dict "v" .by)) }}</div></div><span class="yr">{{ .year }}</span></li>
+        {{- end }}
+      </ul>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="writing">
+  <div class="wrap">
+    {{- $posts := first 3 (where (where site.RegularPages "Params.pagetype" "blog") "Kind" "page") }}
+    {{ partial "sec-head.html" (dict "num" "09" "id" "writing" "title" (i18n "writings") "link" (cond (gt (len $posts) 0) $blog.RelPermalink "") "linktext" (i18n "all_posts")) }}
+    {{ partial "post-list.html" (dict "posts" $posts) }}
+  </div>
+</section>
+{{ end }}

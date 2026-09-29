@@ -1,0 +1,16 @@
+# İmalat sözlüğü (TR–EN). Her terim için iki sayfa otomatik üretilir:
+#   /atlas/glossary/<en.slug>/   ve   /tr/atlas/sozluk/<tr.slug>/
+# Şimdilik boş. Örnek bir terim (başındaki # işaretlerini kaldırarak etkinleştirin):
+#
+# - id: stitch-zone
+#   en: { term: "Stitch zone", slug: "stitch-zone" }
+#   tr: { term: "Dikiş bölgesi", slug: "dikis-bolgesi" }
+#   abbr: ""
+#   synonyms: { en: ["overlap zone"], tr: ["bindirme bölgesi"] }
+#   processes: [additive]
+#   definition:
+#     en: "The region where scan fields (islands, stripes or the fields of different lasers) meet; prone to porosity."
+#     tr: "Tarama alanlarının (ada, şerit veya farklı lazerlerin alanları) birleştiği, gözenek oluşumuna yatkın bölge."
+#   see: []          # ilişkili terim kimlikleri
+#   guides: []       # ilişkili Atlas rehberlerinin çeviri anahtarları
+terms: []

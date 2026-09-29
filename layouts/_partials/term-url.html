@@ -1,0 +1,9 @@
+{{- /* terim kimliğinden mevcut dildeki sözlük sayfasını bulur */ -}}
+{{- $out := false -}}
+{{- $d := partial "term-data.html" . -}}
+{{- with $d -}}
+  {{- $lang := site.Language.Lang -}}
+  {{- $base := cond (eq $lang "tr") "/atlas/sozluk/" "/atlas/glossary/" -}}
+  {{- $out = site.GetPage (printf "%s%s" $base (index $d $lang).slug) -}}
+{{- end -}}
+{{- return $out -}}

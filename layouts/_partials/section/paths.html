@@ -1,0 +1,26 @@
+{{- $lang := site.Language.Lang }}
+<div class="atlas-page">
+{{ partial "atlas-bar.html" . }}
+<header class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="{{ (site.GetPage "/atlas").RelPermalink }}">Atlas</a><span aria-hidden="true">/</span></nav>
+    <h1>{{ .Title }}</h1>
+    {{- with .Description }}<p>{{ . }}</p>{{ end }}
+  </div>
+</header>
+<div class="wrap article">
+  {{- with site.Data.atlas.paths }}
+  <div class="atlas-grid">
+    {{- range . }}
+    <div class="atlas-tile" id="{{ .id }}">
+      <span class="label">{{ partial "t.html" (dict "v" .level "lang" $lang) }} · {{ len .steps }}</span>
+      <h3>{{ partial "t.html" (dict "v" .title "lang" $lang) }}</h3>
+      <ol>{{ range .steps }}{{ with .guide }}{{ range where site.RegularPages "TranslationKey" . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}{{ end }}{{ end }}</ol>
+    </div>
+    {{- end }}
+  </div>
+  {{- else }}
+  {{ partial "empty.html" (i18n "paths_empty") }}
+  {{- end }}
+</div>
+</div>

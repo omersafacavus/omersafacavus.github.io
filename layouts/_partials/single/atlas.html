@@ -1,0 +1,54 @@
+{{- $lang := site.Language.Lang }}
+{{- $atlas := site.GetPage "/atlas" }}
+{{- $siblings := .Parent.RegularPages.ByWeight }}
+{{- $current := . }}
+<div class="atlas-page">
+{{ partial "atlas-bar.html" . }}
+<div class="wrap guide">
+  <aside class="guide-side">
+    <div>
+      <span class="label">{{ .Parent.Title }}</span>
+      <ul class="side-list">
+        {{- range $siblings }}<li><a href="{{ .RelPermalink }}"{{ if eq . $current }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a></li>{{ end }}
+      </ul>
+    </div>
+  </aside>
+  <article class="guide-main">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="{{ $atlas.RelPermalink }}">Atlas</a>{{ if ne .Parent $atlas }}<span aria-hidden="true">/</span><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>{{ end }}</nav>
+    <h1>{{ .Title }}</h1>
+    <div class="post-meta">
+      {{- if eq .Params.guidetype "main" }}<span class="chip chip--atl-solid">{{ i18n "guide" }}</span>{{ end }}
+      {{- with .Params.level }}<span class="chip">{{ i18n "level" }} · {{ . }}</span>{{ end }}
+      <span class="chip">{{ .ReadingTime }} {{ i18n "reading_time" }}</span>
+      <span class="chip">{{ i18n "updated" }} · {{ .Lastmod | time.Format ":date_medium" }}</span>
+    </div>
+    {{- with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    {{- if not (partial "alternates.html" .) }}<p class="notice">{{ i18n "not_translated" }}</p>{{ end }}
+    <div class="prose">{{ .Content }}</div>
+    {{- $terms := slice }}
+    {{- range .Params.terms }}{{ with partial "term-url.html" . }}{{ $terms = $terms | append . }}{{ end }}{{ end }}
+    {{- with $terms }}
+    <div class="related">
+      <span class="label">{{ i18n "related_terms" }}</span>
+      <div class="chips-row">{{ range . }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</div>
+    </div>
+    {{- end }}
+    {{- $idx := -1 }}{{ range $i, $p := $siblings }}{{ if eq $p $current }}{{ $idx = $i }}{{ end }}{{ end }}
+    {{- $prev := false }}{{ $next := false }}
+    {{- if gt $idx 0 }}{{ $prev = index $siblings (sub $idx 1) }}{{ end }}
+    {{- if and (ge $idx 0) (lt (add $idx 1) (len $siblings)) }}{{ $next = index $siblings (add $idx 1) }}{{ end }}
+    {{- if or $prev $next }}
+    <nav class="pn" aria-label="{{ i18n "previous" }} / {{ i18n "next" }}">
+      {{- with $prev }}<a href="{{ .RelPermalink }}"><span class="label">← {{ i18n "previous" }}</span><b>{{ .Title }}</b></a>{{ end }}
+      {{- with $next }}<a class="next" href="{{ .RelPermalink }}"><span class="label">{{ i18n "next" }} →</span><b>{{ .Title }}</b></a>{{ end }}
+    </nav>
+    {{- end }}
+  </article>
+  {{- if .TableOfContents }}
+  <aside class="guide-side toc">
+    <span class="label">{{ i18n "on_this_page" }}</span>
+    {{ .TableOfContents }}
+  </aside>
+  {{- end }}
+</div>
+</div>

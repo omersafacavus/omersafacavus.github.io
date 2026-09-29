@@ -1,0 +1,8 @@
+{{ define "main" }}
+{{- $type := .Params.pagetype | default "default" }}
+{{- if templates.Exists (printf "_partials/single/%s.html" $type) }}
+{{ partial (printf "single/%s.html" $type) . }}
+{{- else }}
+{{ partial "single/default.html" . }}
+{{- end }}
+{{ end }}

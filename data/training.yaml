@@ -1,0 +1,31 @@
+# Eğitim ve atölye teklifleri.
+# format: workshop | online | corporate      status: open | waitlist | planned
+# Aşağıdaki başlıklar taslaktır; kendi programınıza göre düzenleyin veya silin.
+offers:
+  - id: pbf-lb-fundamentals
+    title: { en: "Laser powder bed fusion: process fundamentals", tr: "Toz yataklı lazer füzyon: proses temelleri" }
+    format: workshop
+    audience: { en: "Engineers new to metal AM", tr: "Metal eklemeli imalata yeni başlayan mühendisler" }
+    duration: { en: "[duration]", tr: "[süre]" }
+    topics:
+      en: ["Process parameters and energy density", "Scan strategies", "Supports and residual stress"]
+      tr: ["Proses parametreleri ve enerji yoğunluğu", "Tarama stratejileri", "Destek yapıları ve artık gerilme"]
+    status: planned
+  - id: parametric-modeling
+    title: { en: "Parametric modeling for AM with Grasshopper and C#", tr: "Grasshopper ve C# ile eklemeli imalat için parametrik modelleme" }
+    format: online
+    audience: { en: "Designers and researchers", tr: "Tasarımcılar ve araştırmacılar" }
+    duration: { en: "[duration]", tr: "[süre]" }
+    topics:
+      en: ["Computational geometry basics", "Custom slicing and hatching", "Exporting to simulation"]
+      tr: ["Hesaplamalı geometri temelleri", "Özel dilimleme ve tarama deseni", "Simülasyona aktarım"]
+    status: planned
+  - id: corporate
+    title: { en: "Corporate training", tr: "Kurumsal eğitim" }
+    format: corporate
+    audience: { en: "R&D and production teams", tr: "Ar-Ge ve üretim ekipleri" }
+    duration: { en: "Tailored", tr: "İhtiyaca göre" }
+    topics:
+      en: ["DfAM and process design", "Thermal simulation", "Characterization and qualification"]
+      tr: ["DfAM ve proses tasarımı", "Termal simülasyon", "Karakterizasyon ve kalifikasyon"]
+    status: open

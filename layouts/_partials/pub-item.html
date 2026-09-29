@@ -1,0 +1,17 @@
+{{- $pub := .pub }}
+{{- $me := site.Data.profile.me }}
+{{- $authors := replace ($pub.authors | htmlEscape) ($me | htmlEscape) (printf "<strong>%s</strong>" ($me | htmlEscape)) }}
+{{- $href := "" }}{{ with $pub.url }}{{ $href = . }}{{ end }}{{ with $pub.doi }}{{ $href = printf "https://doi.org/%s" . }}{{ end }}
+{{- $solid := in (slice "published" "presented") $pub.status }}
+<li class="pub">
+  <span class="pub-year">{{ $pub.year }}</span>
+  <div>
+    <div class="pub-title">{{ with $href }}<a href="{{ . }}">{{ $pub.title }}</a>{{ else }}{{ $pub.title }}{{ end }}</div>
+    <div class="pub-meta">{{ $authors | safeHTML }} — <i>{{ $pub.venue }}</i>{{ with $pub.details }}, {{ . }}{{ end }}</div>
+  </div>
+  <div class="pub-side">
+    <span class="chip {{ if $solid }}chip--solid{{ else }}chip--dashed{{ end }}">{{ i18n (printf "status_%s" $pub.status) }}</span>
+    {{- with $pub.doi }}<a href="https://doi.org/{{ . }}">DOI {{ . }}</a>{{ end }}
+    {{- with $pub.pdf }}<a href="{{ . | relURL }}">PDF</a>{{ end }}
+  </div>
+</li>

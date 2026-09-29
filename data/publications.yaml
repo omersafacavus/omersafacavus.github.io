@@ -1,0 +1,129 @@
+# Yayınlar
+# type:   journal | conference
+# status: published | accepted | review | submitted | preparation | presented | to-present
+# doi:    yalnızca "10.xxxx/..." kısmı (bağlantı otomatik oluşur). Boşsa gösterilmez.
+# url:    DOI yoksa yayıncı sayfası. pdf: static/ altındaki dosya yolu (isteğe bağlı).
+# featured: true olanlar ana sayfada gösterilir.
+
+- type: journal
+  year: 2026
+  authors: "Khalilvandi Behrouzyar, S., Cavus, O. S., & Koc, B."
+  title: "A parametric heat source formulation for arbitrary laser beam shaping: application to core–ring profiles and their transient thermal history in PBF-LB"
+  venue: "International Journal of Extreme Manufacturing"
+  status: submitted
+  doi: ""
+  url: ""
+  areas: [beam-shaping, thermal-simulation]
+  featured: true
+
+- type: journal
+  year: 2026
+  authors: "Cavus, O. S., Khalilvandi Behrouzyar, S., & Koc, B."
+  title: "Prediction of cooling rates based on integrated scanning strategies with sophisticated parametric modeling-assisted simulation for additive manufacturing"
+  venue: "Progress in Additive Manufacturing"
+  status: published
+  doi: ""
+  url: ""
+  areas: [scan-strategies, thermal-simulation, microstructure]
+  featured: true
+
+- type: journal
+  year: 2026
+  authors: "Cavus, O. S., Khalilvandi Behrouzyar, S., Javidrad, H. R., & Koc, B."
+  title: "Continuous parametric scanning with thermal modeling to minimize stitch zone defects in laser beam powder bed fusion validated by multi-scale X-ray CT"
+  venue: "Additive Manufacturing"
+  status: published
+  doi: ""
+  url: ""
+  areas: [scan-strategies, thermal-simulation, microstructure]
+  featured: true
+
+- type: journal
+  year: 2026
+  authors: "Kendibilir, A., Khalilvandi Behrouzyar, S., Cavus, O. S., Lahe Motlagh, P., Koc, B., & Kefal, A."
+  title: "Enhancing mechanical performance of metal additively manufactured structures via peridynamic topology optimization and thermo-mechanical process simulation with experimental validation"
+  venue: "Computers & Structures"
+  status: published
+  doi: ""
+  url: ""
+  areas: [topology-optimization]
+  featured: true
+
+- type: journal
+  year: 2025
+  authors: "Khalilvandi Behrouzyar, S., Kendibilir, A., Cavus, O. S., Lahe Motlagh, P., Koc, B., & Kefal, A."
+  title: "Minimizing thermally induced residual stresses in metal additive manufacturing through peridynamics topology optimization"
+  venue: "Engineering with Computers"
+  status: published
+  doi: ""
+  url: ""
+  areas: [topology-optimization]
+  featured: true
+
+- type: journal
+  year: 2024
+  authors: "Cavus, O. S., Khalilvandi Behrouzyar, S., & Koc, B."
+  title: "Functional island scanning strategy for powder bed fusion"
+  venue: "Journal of Additive Manufacturing Technologies"
+  status: published
+  doi: ""
+  url: ""
+  areas: [scan-strategies]
+  featured: true
+
+- type: journal
+  year: 2022
+  authors: "Kendibilir, A., Polat, M. F., Cavus, O. S., Behrouzyar, S. K., Motlagh, P. L., Koc, B., & Kefal, A."
+  title: "Combination of peridynamics and genetic algorithm based topology optimization methods for AM-friendly designs"
+  venue: "Journal of Additive Manufacturing Technologies"
+  details: "2(1), 704"
+  status: published
+  doi: ""
+  url: ""
+  areas: [topology-optimization]
+  featured: true
+
+- type: conference
+  year: 2026
+  authors: "Cavus, O. S., Khalilvandi Behrouzyar, S., Javidrad, H. R., & Koc, B."
+  title: "Investigating the role of scanning strategies on porosity formation and mitigation in stitch regions via thermal modeling and X-Ray CT"
+  venue: "6th AMCTURKEY Additive Manufacturing Conference, Antalya, Türkiye"
+  status: to-present
+  areas: [scan-strategies, microstructure]
+  featured: true
+
+- type: conference
+  year: 2026
+  authors: "Ozyilmaz, P., Cavus, O. S., Khalilvandi Behrouzyar, S., Erkul, I., & Koc, B."
+  title: "Assessing the limits of in-situ back-scatter electron imaging in narrow electron beam powder bed fusion process windows using X-Ray CT"
+  venue: "6th AMCTURKEY Additive Manufacturing Conference, Antalya, Türkiye"
+  status: to-present
+  areas: [machine-learning, microstructure]
+  featured: true
+
+- type: conference
+  year: 2025
+  authors: "Cavus, O. S., Khalilvandi Behrouzyar, S., & Koc, B."
+  title: "Transient and spatial evolution of temperature gradients and solidification rates in laser beam powder bed fusion"
+  venue: "5th AMCTURKEY Additive Manufacturing Conference, Antalya, Türkiye"
+  status: presented
+  areas: [thermal-simulation]
+  featured: true
+
+- type: conference
+  year: 2025
+  authors: "Khalilvandi Behrouzyar, S., Cavus, O. S., & Koc, B."
+  title: "A comparative study of single and multi-laser beam effects on thermal gradient and solidification rate in LB-PBF"
+  venue: "5th AMCTURKEY Additive Manufacturing Conference, Antalya, Türkiye"
+  status: presented
+  areas: [thermal-simulation]
+  featured: true
+
+- type: conference
+  year: 2024
+  authors: "Cavus, O. S., Khalilvandi Behrouzyar, S., & Koc, B."
+  title: "Design thermal analysis and optimization of the novel geometry based scan strategies"
+  venue: "4th AMCTURKEY Additive Manufacturing Conference, Antalya, Türkiye"
+  status: presented
+  areas: [scan-strategies]
+  featured: true

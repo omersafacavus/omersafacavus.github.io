@@ -1,0 +1,9 @@
+{{- $page := .page }}
+<header class="page-head">
+  <div class="wrap">
+    {{- with .kicker }}<p class="kicker">{{ . }}</p>{{ end }}
+    <h1>{{ $page.Title }}</h1>
+    {{- with $page.Description }}<p>{{ . }}</p>{{ end }}
+    {{- with .extra }}{{ . }}{{ end }}
+  </div>
+</header>

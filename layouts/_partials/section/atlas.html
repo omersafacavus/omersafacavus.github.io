@@ -1,0 +1,49 @@
+{{- $lang := site.Language.Lang }}
+{{- $glossary := site.GetPage (cond (eq $lang "tr") "/atlas/sozluk" "/atlas/glossary") }}
+{{- $paths := site.GetPage (cond (eq $lang "tr") "/atlas/ogrenme-yollari" "/atlas/paths") }}
+<div class="atlas-page">
+{{ partial "atlas-bar.html" . }}
+<header class="page-head atlas-hero">
+  <div class="wrap">
+    <p class="kicker">Atlas</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ i18n "atlas_tagline" }}</p>
+  </div>
+</header>
+<section class="section">
+  <div class="wrap">
+    <div class="atlas-grid">
+      <a class="atlas-tile" href="{{ $glossary.RelPermalink }}">
+        <span class="label">{{ i18n "glossary" }} · {{ len $glossary.RegularPages }}</span>
+        <h3>{{ i18n "glossary_title" }}</h3>
+        <p>{{ $glossary.Description }}</p>
+      </a>
+      <a class="atlas-tile" href="{{ $paths.RelPermalink }}">
+        <span class="label">{{ i18n "paths" }} · {{ len site.Data.atlas.paths }}</span>
+        <h3>{{ i18n "paths" }}</h3>
+        <p>{{ $paths.Description }}</p>
+      </a>
+      <div class="atlas-tile">
+        <span class="label">{{ i18n "atlas_processes" }} · {{ i18n "atlas_topics" }}</span>
+        <h3>{{ i18n "atlas_processes" }}</h3>
+        <p>{{ i18n "atlas_tagline" }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    {{ partial "sec-head.html" (dict "num" "→" "id" "guides" "title" (i18n "recent_additions")) }}
+    {{- $guides := .RegularPages.ByLastmod.Reverse }}
+    {{- if $guides }}
+    <ul class="post-list">
+      {{- range $guides }}
+      <li><time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod | time.Format ":date_medium" }}</time><div><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>{{ with .Description }}<p>{{ . }}</p>{{ end }}</div></li>
+      {{- end }}
+    </ul>
+    {{- else }}
+    {{ partial "empty.html" (i18n "atlas_empty") }}
+    {{- end }}
+  </div>
+</section>
+</div>

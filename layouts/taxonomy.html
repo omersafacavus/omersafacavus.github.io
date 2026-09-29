@@ -1,0 +1,6 @@
+{{ define "main" }}
+{{ partial "page-head.html" (dict "page" .) }}
+<div class="wrap article">
+  <div class="chips-row">{{ range .Pages }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }} · {{ len .Pages }}</a>{{ end }}</div>
+</div>
+{{ end }}
