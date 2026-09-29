@@ -5,11 +5,11 @@
   end: "2026"
   items:
     en:
-      - "Additive manufacturing: end-to-end process design including part-scale thermal analysis, support structure engineering and DfAM-based geometry optimization."
-      - "Casting: developed in-house software for automated mold generation; research on heat treatment recipes and material characterization of aluminum alloys."
+      - "Additive manufacturing: provided technical consulting on end-to-end process design, including part-scale thermal analysis, support structure engineering and DfAM-based geometry optimization."
+      - "Casting: guided the development of in-house software for automated mold generation and advised on heat treatment recipes and material characterization for aluminum alloys."
     tr:
-      - "Eklemeli imalat: parça ölçeğinde termal analiz, destek yapısı mühendisliği ve DfAM ilkelerine dayalı geometri optimizasyonunu içeren uçtan uca proses tasarımı."
-      - "Döküm: otomatik kalıp üretimi için kurum içi yazılım geliştirme; alüminyum alaşımlarında ısıl işlem reçeteleri ve malzeme karakterizasyonu araştırmaları."
+      - "Eklemeli imalat: parça ölçeğinde termal analiz, destek yapısı mühendisliği ve DfAM ilkelerine dayalı geometri optimizasyonunu kapsayan uçtan uca proses tasarımına teknik danışmanlık verdim."
+      - "Döküm: otomatik kalıp üretimi için geliştirilen kurum içi yazılıma yön verdim; alüminyum alaşımlarında ısıl işlem reçeteleri ve malzeme karakterizasyonu konularında danışmanlık sağladım."
 - org: { en: "Sabancı University Integrated Manufacturing Technologies Research and Application Center (SU-IMC)", tr: "Sabancı Üniversitesi Entegre İmalat Teknolojileri Araştırma ve Uygulama Merkezi (SU-IMC)" }
   role: { en: "Researcher", tr: "Araştırmacı" }
   start: "2020"
