@@ -157,7 +157,7 @@ calls:
     periodic: true
     url: "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship"
     description:
-      en: "Fellowships for postdoctoral researchers of all nationalities to conduct long-term research in Germany. No deadline — applications reviewed continuously."
+      en: "Fellowships for postdoctoral researchers of all nationalities to conduct long-term research in Germany. No deadline. Applications reviewed continuously."
       tr: "Tüm uluslardan doktora sonrası araştırmacıların Almanya'da uzun süreli araştırma yapması için burs. Son başvuru tarihi yok, başvurular sürekli değerlendirilir."
 
   - id: daad-postdoc
@@ -206,8 +206,8 @@ calls:
 
   - id: cost-actions
     title:
-      en: "COST Actions — Open Call"
-      tr: "COST Eylemleri — Açık Çağrı"
+      en: "COST Actions: Open Call"
+      tr: "COST Eylemleri: Açık Çağrı"
     funder: "COST Association"
     program: "COST"
     type: grant
