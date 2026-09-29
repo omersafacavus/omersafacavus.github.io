@@ -91,7 +91,7 @@
   authors: "Cavus, O. S., Khalilvandi Behrouzyar, S., Javidrad, H. R., & Koc, B."
   title: "Investigating the role of scanning strategies on porosity formation and mitigation in stitch regions via thermal modeling and X-Ray CT"
   venue: "6th AMCTURKEY Additive Manufacturing Conference, Antalya, Türkiye"
-  status: to-present
+  status: presented
   areas: [scan-strategies, microstructure]
   featured: true
 
@@ -100,7 +100,7 @@
   authors: "Ozyilmaz, P., Cavus, O. S., Khalilvandi Behrouzyar, S., Erkul, I., & Koc, B."
   title: "Assessing the limits of in-situ back-scatter electron imaging in narrow electron beam powder bed fusion process windows using X-Ray CT"
   venue: "6th AMCTURKEY Additive Manufacturing Conference, Antalya, Türkiye"
-  status: to-present
+  status: presented
   areas: [machine-learning, microstructure]
   featured: true
 
