@@ -9,7 +9,7 @@
 <section class="hero" aria-labelledby="hero-name">
   <div class="wrap">
     <p class="kicker">{{ partial "t.html" (merge $t (dict "v" $p.kicker)) }}</p>
-    <h1 id="hero-name">{{ $p.name | replaceRE "^(\\S+\\s+\\S+)\\s+" "$1<br>" | safeHTML }}</h1>
+    <h1 id="hero-name">{{ $p.name }}</h1>
     <div class="hero-row">
       <p class="hero-lead">{{ partial "t.html" (merge $t (dict "v" $p.lead)) }}</p>
       <div class="hero-actions">
