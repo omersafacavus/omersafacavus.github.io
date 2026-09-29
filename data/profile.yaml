@@ -15,7 +15,7 @@ jobTitle:
   tr: "İmalat Mühendisi"
 kicker:
   en: "manufacturing engineer · metal additive manufacturing"
-  tr: "imalat mühendisi · metal eklemeli imalat"
+  tr: "imalat mühendisi · eklemeli imalat"
 lead:
   en: "I build physics-based models that connect design, simulation and production in metal additive manufacturing: from custom scan paths to thermal history, microstructure and defects, validated by experiment. My work spans laser powder bed fusion, beam shaping, process-aware topology optimization and machine learning."
   tr: "Metal eklemeli imalatta tasarım, simülasyon ve üretimi tek bir zincirde birleştiren fizik tabanlı modeller geliştiriyorum: tarama yollarını tasarlıyor, bunların oluşturduğu sıcaklık geçmişini, mikroyapıyı ve kusurları öngörüyor, sonuçları deneylerle doğruluyorum. Toz yataklı lazer füzyon, ışın şekillendirme, proses odaklı topoloji optimizasyonu ve makine öğrenmesi üzerine çalışıyorum."
@@ -31,6 +31,21 @@ about:
     - "Sabancı Üniversitesi'nde Prof. Dr. Bahattin Koç danışmanlığında İmalat Mühendisliği bütünleşik doktoramı tamamlıyorum. Çalışmalarım metal eklemeli imalatta proses–yapı–özellik–performans zincirini izliyor; odağımda toz yataklı lazer füzyon için fizik tabanlı modeller var."
     - "Bu çalışmaların merkezinde tasarım, simülasyon ve üretimi birleştiren parametrik bir çerçeve duruyor: sıfırdan yazdığım dilimleyici parça geometrisinden tarama yollarını üretiyor, termal simülasyon girdilerini hazırlıyor ve makine dosyasını çıkarıyor. Bu çerçeveyle soğuma ve katılaşma hızlarını tahmin ediyor, kinetik Monte Carlo ile tane yapısına bağlıyor ve dikiş bölgesi kusurlarını azaltan tarama stratejileri tasarlıyorum; sonuçları çok ölçekli X-ışını BT, XRD, SEM ve mekanik testlerle doğruluyorum."
     - "Proses odaklı topoloji optimizasyonu, ışın şekillendirme ve dedektör sinyalleri üzerinde makine öğrenmesi de çalıştığım konular arasında. Machina3D'de bu birikimi sanayiye taşıdım: eklemeli imalatta proses ve destek yapısı tasarımından alüminyum dökümde otomatik kalıp tasarımı ve ısıl işleme kadar."
+keywords:
+  - { en: "Metal Additive Manufacturing", tr: "Metal Eklemeli İmalat" }
+  - { en: "Laser Powder Bed Fusion (PBF-LB)", tr: "Toz Yataklı Lazer Füzyon (PBF-LB)" }
+  - { en: "Thermal Simulation", tr: "Termal Simülasyon" }
+  - { en: "Scan Strategies", tr: "Tarama Stratejileri" }
+  - { en: "Microstructure", tr: "Mikroyapı" }
+  - { en: "Mechanical Properties", tr: "Mekanik Özellikler" }
+  - { en: "In-situ Monitoring", tr: "Yerinde İzleme (in-situ)" }
+  - { en: "Kinetic Monte Carlo", tr: "Kinetik Monte Carlo" }
+  - { en: "Topology Optimization", tr: "Topoloji Optimizasyonu" }
+  - { en: "Beam Shaping", tr: "Işın Şekillendirme" }
+  - { en: "Artificial Intelligence", tr: "Yapay Zeka" }
+  - { en: "DfAM", tr: "DfAM" }
+  - { en: "X-ray CT", tr: "X-ışını BT" }
+  - { en: "Parametric Modeling", tr: "Parametrik Modelleme" }
 # Bağlantılar: url boş bırakılırsa gösterilmez.
 links:
   - { name: "LinkedIn", url: "https://www.linkedin.com/in/cavusomersafa" }
