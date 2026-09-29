@@ -23,16 +23,16 @@
   {{- if $calls }}
   <ul class="funding-list" data-funding-list>
     {{- range $calls }}
-    {{- $title := cond (reflect.IsMap .title) (index .title $lang | default (index .title "en")) .title }}
-    {{- $funder := cond (reflect.IsMap .funder) (index .funder $lang | default (index .funder "en")) .funder }}
-    {{- $desc := cond (reflect.IsMap .description) (index .description $lang | default (index .description "en")) .description }}
-    {{- $dur := cond (reflect.IsMap .duration) (index .duration $lang | default (index .duration "en")) .duration }}
+    {{- $title := .title }}{{ if reflect.IsMap .title }}{{ $title = index .title $lang | default (index .title "en") }}{{ end }}
+    {{- $funder := .funder }}{{ if reflect.IsMap .funder }}{{ $funder = index .funder $lang | default (index .funder "en") }}{{ end }}
+    {{- $desc := .description }}{{ if reflect.IsMap .description }}{{ $desc = index .description $lang | default (index .description "en") }}{{ end }}
+    {{- $dur := .duration }}{{ if reflect.IsMap .duration }}{{ $dur = index .duration $lang | default (index .duration "en") }}{{ end }}
     {{- $deadlineStr := .deadline | default "" }}
     {{- $isExpired := false }}
     {{- if $deadlineStr }}{{ $isExpired = lt $deadlineStr $now }}{{ end }}
     {{- $status := .status }}
     {{- if and (eq $status "open") $isExpired }}{{ $status = "closed" }}{{ end }}
-    {{- if and (eq $status "upcoming") (not $isExpired) (ne $deadlineStr "") }}{{ end }}
+    {{- /* upcoming kalmışsa herhangi bir işlem gerekmez */ -}}
     <li class="funding-card{{ if eq $status "closed" }} funding-card--closed{{ end }}" data-region="{{ .region }}" data-type="{{ .type }}" data-status="{{ $status }}">
       <div class="funding-card__head">
         <div class="funding-card__meta">
