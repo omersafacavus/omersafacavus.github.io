@@ -4,30 +4,13 @@
 # region: eu | tr | de | us | international
 # status: open | upcoming | closed
 # periodic: true = her yıl/dönem açılır
-calls:
-  - id: msca-postdoc-2027
-    title:
-      en: "MSCA Postdoctoral Fellowships 2027"
-      tr: "MSCA Doktora Sonrası Bursları 2027"
-    funder:
-      en: "European Commission"
-      tr: "Avrupa Komisyonu"
-    program: "Marie Skłodowska-Curie Actions"
-    type: fellowship
-    stage: postdoc
-    region: eu
-    deadline: "2027-09-10"
-    duration:
-      en: "12–24 months"
-      tr: "12–24 ay"
-    budget: "~€200,000"
-    status: upcoming
-    periodic: true
-    url: "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"
-    description:
-      en: "Individual fellowships for postdoctoral researchers to carry out research in a European or international host institution. European and Global Fellowships available."
-      tr: "Doktora sonrası araştırmacıların Avrupa'da veya uluslararası bir kurumda araştırma yapması için bireysel burslar. Avrupa ve Küresel Burs seçenekleri mevcut."
+# deadline: ISO tarih. Boş bırakılırsa "sürekli başvuru" gösterilir.
+# deadline_text: takvimi tek tarihe sığmayan programlar için serbest metin.
+#   Verildiğinde deadline alanının yerine geçer.
+meta:
+  verified: "2026-09-29"
 
+calls:
   - id: erc-starting-2027
     title:
       en: "ERC Starting Grant 2027"
@@ -39,17 +22,19 @@ calls:
     type: grant
     stage: postdoc
     region: eu
-    deadline: "2027-10-22"
+    deadline: "2026-10-14"
     duration:
       en: "5 years"
       tr: "5 yıl"
-    budget: "€1,500,000"
-    status: upcoming
+    budget:
+      en: "€1,500,000 (+ up to €1M)"
+      tr: "€1.500.000 (+ €1M'a kadar)"
+    status: open
     periodic: true
     url: "https://erc.europa.eu/apply-grant/starting-grant"
     description:
-      en: "Funding for early-career researchers (2–7 years after PhD) to build their own research team and pursue frontier research."
-      tr: "Kariyerinin başındaki araştırmacıların (doktoradan 2–7 yıl sonra) kendi ekiplerini kurarak öncü araştırma yapması için hibe."
+      en: "Funding for early-career researchers to build their own team and pursue frontier research. The 2027 Work Programme widened eligibility to 0–10 years since PhD, and applicants may submit only one ERC proposal per Work Programme."
+      tr: "Kariyerinin başındaki araştırmacıların kendi ekiplerini kurarak öncü araştırma yapması için hibe. 2027 Çalışma Programı uygunluk aralığını doktoradan sonraki 0–10 yıla genişletti ve her Çalışma Programı için yalnızca tek bir ERC başvurusuna izin veriliyor."
 
   - id: erc-consolidator-2027
     title:
@@ -62,38 +47,92 @@ calls:
     type: grant
     stage: senior
     region: eu
-    deadline: "2027-01-01"
+    deadline: "2027-01-12"
     duration:
       en: "5 years"
       tr: "5 yıl"
-    budget: "€2,000,000"
-    status: upcoming
+    budget:
+      en: "€2,000,000 (+ up to €1M)"
+      tr: "€2.000.000 (+ €1M'a kadar)"
+    status: open
     periodic: true
     url: "https://erc.europa.eu/apply-grant/consolidator-grant"
     description:
-      en: "Funding for mid-career researchers (7–12 years after PhD) to consolidate their research group and programme."
-      tr: "Kariyerinin ortasındaki araştırmacıların (doktoradan 7–12 yıl sonra) araştırma grubunu pekiştirmesi için hibe."
+      en: "Funding for mid-career researchers to consolidate their group and research programme. The 2027 eligibility window is 5–15 years since PhD, which now overlaps with the Starting Grant window."
+      tr: "Kariyerinin ortasındaki araştırmacıların grubunu ve araştırma programını pekiştirmesi için hibe. 2027 uygunluk aralığı doktoradan sonraki 5–15 yıl olup artık Başlangıç Hibesi aralığıyla kesişiyor."
 
-  - id: tubitak-2232
+  - id: cost-actions
     title:
-      en: "TÜBİTAK 2232 International Fellowship for Outstanding Researchers"
-      tr: "TÜBİTAK 2232 Yurda Dönüş Araştırma Bursları"
-    funder: "TÜBİTAK"
-    program: "2232"
+      en: "COST Open Call OC-2026-1"
+      tr: "COST Açık Çağrı OC-2026-1"
+    funder: "COST Association"
+    program: "COST"
+    type: grant
+    stage: any
+    region: eu
+    deadline: "2026-10-28"
+    duration:
+      en: "4 years"
+      tr: "4 yıl"
+    budget:
+      en: "€125,000 year 1, ~€150,000/year after"
+      tr: "1. yıl €125.000, sonraki yıllar ~€150.000"
+    status: open
+    periodic: true
+    url: "https://www.cost.eu/how-to-apply/"
+    description:
+      en: "Funding for pan-European research networks. COST does not fund the research itself but supports networking, workshops, short-term scientific missions and training schools. Proposals need researchers from at least seven COST member countries. Around 80 Actions will be funded from this collection."
+      tr: "Avrupa çapında araştırma ağları için finansman. COST araştırmanın kendisini değil; ağ oluşturma, atölye, kısa süreli bilimsel görev ve eğitim okullarını destekler. Başvurularda en az yedi COST üyesi ülkeden araştırmacı gerekir. Bu dönemde yaklaşık 80 Eylem desteklenecek."
+
+  - id: msca-postdoc-2027
+    title:
+      en: "MSCA Postdoctoral Fellowships 2027"
+      tr: "MSCA Doktora Sonrası Bursları 2027"
+    funder:
+      en: "European Commission"
+      tr: "Avrupa Komisyonu"
+    program: "Marie Skłodowska-Curie Actions"
     type: fellowship
     stage: postdoc
-    region: tr
-    deadline: "2027-03-01"
+    region: eu
+    deadline: "2027-09-08"
     duration:
-      en: "24 months"
-      tr: "24 ay"
-    budget: ""
+      en: "12–24 months"
+      tr: "12–24 ay"
+    budget:
+      en: "~€200,000 (indicative)"
+      tr: "~€200.000 (gösterge)"
     status: upcoming
     periodic: true
-    url: "https://www.tubitak.gov.tr/tr/burslar/doktora-sonrasi/burs-programlari/2232"
+    url: "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"
     description:
-      en: "Fellowship programme to attract outstanding researchers working abroad back to Turkey or to bring international talent."
-      tr: "Yurt dışında çalışan başarılı araştırmacıları Türkiye'ye çekmek veya uluslararası yetenekleri getirmek için burs programı."
+      en: "Individual fellowships to carry out research at a European or international host institution, in European and Global variants. The 2026 call closed on 9 September 2026. The 2027 call is expected to open on 7 April 2027 with a budget of €388.57M, dates still to be confirmed."
+      tr: "Avrupa'da veya uluslararası bir kurumda araştırma yapmak için bireysel burslar; Avrupa ve Küresel seçenekleri var. 2026 çağrısı 9 Eylül 2026'da kapandı. 2027 çağrısının 7 Nisan 2027'de €388,57M bütçeyle açılması bekleniyor, tarihler henüz kesinleşmedi."
+
+  - id: horizon-collaborative
+    title:
+      en: "Horizon Europe Cluster 4 Collaborative Projects"
+      tr: "Horizon Europe Küme 4 İşbirlikçi Projeler"
+    funder:
+      en: "European Commission"
+      tr: "Avrupa Komisyonu"
+    program: "Horizon Europe Cluster 4"
+    type: grant
+    stage: any
+    region: eu
+    deadline: "2027-02-02"
+    duration:
+      en: "36–48 months"
+      tr: "36–48 ay"
+    budget:
+      en: "€3–17.5M (RIA), €6–19M (IA)"
+      tr: "€3–17,5M (RIA), €6–19M (IA)"
+    status: upcoming
+    periodic: true
+    url: "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/cluster-4-digital-industry-and-space_en"
+    description:
+      en: "Large-scale collaborative research and innovation under Cluster 4 (Digital, Industry and Space), including advanced manufacturing and materials topics. Consortia need at least three partners from different member or associated states. HORIZON-CL4-2027-01 closes on 2 February 2027, with further deadlines on 18 March and 2 September 2027."
+      tr: "Küme 4 (Dijital, Sanayi ve Uzay) kapsamında büyük ölçekli işbirlikçi araştırma ve inovasyon; ileri imalat ve malzeme konuları dahil. Konsorsiyumlarda en az üç farklı üye veya ortak ülkeden partner gerekir. HORIZON-CL4-2027-01 çağrısı 2 Şubat 2027'de kapanıyor; 18 Mart ve 2 Eylül 2027'de başka son tarihler var."
 
   - id: tubitak-1001
     title:
@@ -104,24 +143,26 @@ calls:
     type: grant
     stage: any
     region: tr
-    deadline: ""
+    deadline: "2026-09-14"
     duration:
-      en: "12–36 months"
-      tr: "12–36 ay"
-    budget: "₺2,400,000"
-    status: open
+      en: "Up to 36 months"
+      tr: "36 aya kadar"
+    budget:
+      en: "₺3,000,000"
+      tr: "₺3.000.000"
+    status: closed
     periodic: true
-    url: "https://www.tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1001"
+    url: "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1001-bilimsel-ve-teknolojik-arastirma-projelerini-destekleme-programi"
     description:
-      en: "Turkey's principal investigator-driven research grant programme, open to all scientific disciplines. Rolling deadline."
-      tr: "Tüm bilimsel disiplinlere açık, araştırmacı odaklı temel araştırma destek programı. Sürekli başvuruya açık."
+      en: "Turkey's principal investigator-driven research grant, open to all disciplines. It runs in two fixed periods a year rather than continuously. The 2026 second period closed on 14 September 2026; the 2027 first period is expected around March 2027. The ceiling is ₺3,000,000 excluding scholarships, incentive premiums and institutional share."
+      tr: "Tüm disiplinlere açık, araştırmacı odaklı temel araştırma desteği. Sürekli değil, yılda iki sabit dönem hâlinde açılır. 2026 ikinci dönemi 14 Eylül 2026'da kapandı; 2027 birinci döneminin Mart 2027 civarında açılması bekleniyor. Üst limit burs, proje teşvik ikramiyesi ve kurum hissesi hariç ₺3.000.000'dur."
 
   - id: tubitak-1002
     title:
-      en: "TÜBİTAK 1002 Short-Term R&D Funding"
-      tr: "TÜBİTAK 1002 Hızlı Destek Programı"
+      en: "TÜBİTAK 1002-A Short-Term R&D Funding"
+      tr: "TÜBİTAK 1002-A Hızlı Destek Modülü"
     funder: "TÜBİTAK"
-    program: "1002"
+    program: "1002-A"
     type: grant
     stage: any
     region: tr
@@ -129,13 +170,67 @@ calls:
     duration:
       en: "Up to 12 months"
       tr: "12 aya kadar"
-    budget: "₺120,000"
+    budget:
+      en: "₺150,000"
+      tr: "₺150.000"
     status: open
     periodic: true
-    url: "https://www.tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002"
+    url: "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002-hizli-destek-modulu"
     description:
-      en: "Fast-track funding for short-term, well-scoped research projects. Rolling deadline."
-      tr: "Kısa süreli, kapsamı net araştırma projeleri için hızlı destek. Sürekli başvuruya açık."
+      en: "Fast-track funding for short-term, well-scoped research projects. Applications are accepted year-round with no deadline. The ceiling rose to ₺150,000 including scholarships on 1 February 2026, and the e-signature step must be completed within 15 days of submission."
+      tr: "Kısa süreli ve kapsamı net araştırma projeleri için hızlı destek. Başvurular yıl boyunca, zaman kısıtı olmadan alınır. Üst limit 1 Şubat 2026'da burs dahil ₺150.000'e yükseldi; e-imza süreci başvurudan sonraki 15 gün içinde tamamlanmalıdır."
+
+  - id: tubitak-2232-a
+    title:
+      en: "TÜBİTAK 2232-A International Leading Researchers Programme"
+      tr: "TÜBİTAK 2232-A Uluslararası Lider Araştırmacılar Programı"
+    funder: "TÜBİTAK"
+    program: "2232-A"
+    type: fellowship
+    stage: senior
+    region: tr
+    deadline: ""
+    deadline_text:
+      en: "2026 call not yet announced (2025: 30 Dec)"
+      tr: "2026 çağrısı henüz duyurulmadı (2025: 30 Aralık)"
+    duration:
+      en: "24–36 months"
+      tr: "24–36 ay"
+    budget:
+      en: "₺200,000/month + ₺3,000,000 project"
+      tr: "₺200.000/ay + ₺3.000.000 proje"
+    status: upcoming
+    periodic: true
+    url: "https://tubitak.gov.tr/tr/burslar/uluslararasi/arastirma-burs-programlari/2232-uluslararasi-lider-arastirmacilar-programi"
+    description:
+      en: "Brings experienced researchers working abroad to a Turkish host institution. Alongside the monthly salary it provides a one-off research start-up package of ₺4,700,000 and family support of ₺15,000 a month. The most recent call ran from 27 September to 30 December 2025."
+      tr: "Yurt dışında çalışan deneyimli araştırmacıları Türkiye'deki bir kuruma getirir. Aylık ücretin yanında bir defaya mahsus ₺4.700.000 araştırma başlangıç paketi ve aylık ₺15.000 aile desteği sağlar. Son çağrı 27 Eylül ile 30 Aralık 2025 arasında açıktı."
+
+  - id: tubitak-2232-b
+    title:
+      en: "TÜBİTAK 2232-B International Young Researchers Programme"
+      tr: "TÜBİTAK 2232-B Uluslararası Genç Araştırmacılar Programı"
+    funder: "TÜBİTAK"
+    program: "2232-B"
+    type: fellowship
+    stage: postdoc
+    region: tr
+    deadline: ""
+    deadline_text:
+      en: "2026 call not yet announced (2025: 30 Dec)"
+      tr: "2026 çağrısı henüz duyurulmadı (2025: 30 Aralık)"
+    duration:
+      en: "24–36 months"
+      tr: "24–36 ay"
+    budget:
+      en: "₺150,000/month + ₺2,350,000 start-up"
+      tr: "₺150.000/ay + ₺2.350.000 başlangıç"
+    status: upcoming
+    periodic: true
+    url: "https://tubitak.gov.tr/tr/burslar/uluslararasi/arastirma-burs-programlari/2232-b-uluslararasi-genc-arastirmacilar-programi"
+    description:
+      en: "The early-career counterpart of 2232-A, for researchers within four years of their PhD who have at least one year of postdoctoral experience abroad. Research support runs up to ₺3,000,000 on top of the start-up package, with family support and health insurance included."
+      tr: "2232-A'nın kariyer başındaki karşılığı; doktorasını tamamlayalı en fazla dört yıl olan ve yurt dışında en az bir yıl doktora sonrası deneyimi bulunan araştırmacılar için. Başlangıç paketine ek olarak ₺3.000.000'a kadar araştırma desteği, aile desteği ve sağlık sigortası sağlanır."
 
   - id: humboldt-postdoc
     title:
@@ -149,18 +244,23 @@ calls:
     stage: postdoc
     region: de
     deadline: ""
+    deadline_text:
+      en: "Three rounds a year, next opens 15 Nov 2026"
+      tr: "Yılda üç dönem, sıradaki 15 Kas 2026"
     duration:
       en: "6–24 months"
       tr: "6–24 ay"
-    budget: "€2,670/month + allowances"
-    status: open
+    budget:
+      en: "€3,000/month (experienced: €3,600)"
+      tr: "€3.000/ay (deneyimli: €3.600)"
+    status: upcoming
     periodic: true
     url: "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship"
     description:
-      en: "Fellowships for postdoctoral researchers of all nationalities to conduct long-term research in Germany. No deadline. Applications reviewed continuously."
-      tr: "Tüm uluslardan doktora sonrası araştırmacıların Almanya'da uzun süreli araştırma yapması için burs. Son başvuru tarihi yok, başvurular sürekli değerlendirilir."
+      en: "Fellowships for researchers of all nationalities to carry out long-term research in Germany. Applications are no longer continuous: there are three calls a year, each opening about eight months before its selection meeting, and a round closes early once it reaches 800 applications."
+      tr: "Tüm uluslardan araştırmacıların Almanya'da uzun süreli araştırma yapması için burs. Başvurular artık sürekli değil: yılda üç çağrı açılır, her biri seçim toplantısından yaklaşık sekiz ay önce başlar ve bir dönem 800 başvuruya ulaştığında erken kapanır."
 
-  - id: daad-postdoc
+  - id: daad-prime
     title:
       en: "DAAD Postdoctoral Researchers International Mobility Experience (PRIME)"
       tr: "DAAD Doktora Sonrası Uluslararası Hareketlilik Deneyimi (PRIME)"
@@ -169,17 +269,22 @@ calls:
     type: fellowship
     stage: postdoc
     region: de
-    deadline: "2027-09-15"
+    deadline: ""
+    deadline_text:
+      en: "Annual, late August (2025: 29 Aug)"
+      tr: "Yıllık, ağustos sonu (2025: 29 Ağustos)"
     duration:
       en: "18 months (12 abroad + 6 Germany)"
       tr: "18 ay (12 yurt dışı + 6 Almanya)"
-    budget: ""
+    budget:
+      en: "€4,000–5,000/month gross + allowances"
+      tr: "Brüt €4.000–5.000/ay + ödenekler"
     status: upcoming
     periodic: true
-    url: "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/prime/"
+    url: "https://www.daad.de/en/studying-in-germany/scholarships/daad-funding-programmes/prime/"
     description:
-      en: "Postdoc programme combining an international research phase with a return phase at a German university."
-      tr: "Uluslararası bir araştırma aşamasını Almanya'daki bir üniversitede dönüş aşamasıyla birleştiren doktora sonrası programı."
+      en: "Funds a 12-month research phase abroad followed by a 6-month integration phase at a German university, on a fixed-term contract at TV-L pay grade 13 rather than a stipend. An expatriate allowance of roughly €1,200 to €2,000 a month applies during the phase abroad."
+      tr: "12 aylık yurt dışı araştırma aşamasını, Almanya'daki bir üniversitede 6 aylık entegrasyon aşaması izler; burs değil, TV-L 13 derecesinden süreli iş sözleşmesi sağlanır. Yurt dışı aşamasında aylık yaklaşık €1.200 ile €2.000 arasında yurt dışı ödeneği verilir."
 
   - id: tum-global-postdoc
     title:
@@ -192,58 +297,14 @@ calls:
     type: fellowship
     stage: postdoc
     region: de
-    deadline: ""
+    deadline: "2026-09-30"
     duration:
-      en: "Up to 24 months"
-      tr: "24 aya kadar"
+      en: "24 months"
+      tr: "24 ay"
     budget: ""
-    status: upcoming
+    status: open
     periodic: true
-    url: "https://www.tum.de/en/research/postdocs/tum-postdoc-funding"
+    url: "https://www.tum.de/en/about-tum/careers-and-jobs/postdocs/tum-global-postdoc-fellowship"
     description:
-      en: "Competitive postdoctoral fellowships for international researchers at one of Europe's top technical universities."
-      tr: "Avrupa'nın önde gelen teknik üniversitelerinden birinde uluslararası araştırmacılar için rekabetçi doktora sonrası bursları."
-
-  - id: cost-actions
-    title:
-      en: "COST Actions: Open Call"
-      tr: "COST Eylemleri: Açık Çağrı"
-    funder: "COST Association"
-    program: "COST"
-    type: grant
-    stage: any
-    region: eu
-    deadline: "2027-10-29"
-    duration:
-      en: "4 years"
-      tr: "4 yıl"
-    budget: "€150,000/year (networking)"
-    status: upcoming
-    periodic: true
-    url: "https://www.cost.eu/funding/open-call/"
-    description:
-      en: "Funding for pan-European research networks. COST does not fund research itself but supports networking, workshops, short-term scientific missions and training schools."
-      tr: "Avrupa çapında araştırma ağları için finansman. COST araştırmanın kendisini finanse etmez ancak ağ oluşturma, atölyeler, kısa süreli bilimsel görevler ve eğitim okullarını destekler."
-
-  - id: horizon-collaborative
-    title:
-      en: "Horizon Europe Collaborative Projects"
-      tr: "Horizon Europe İşbirlikçi Projeler"
-    funder:
-      en: "European Commission"
-      tr: "Avrupa Komisyonu"
-    program: "Horizon Europe Cluster 4"
-    type: grant
-    stage: any
-    region: eu
-    deadline: ""
-    duration:
-      en: "36–48 months"
-      tr: "36–48 ay"
-    budget: "€3–8M (consortium)"
-    status: upcoming
-    periodic: true
-    url: "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/horizon"
-    description:
-      en: "Large-scale collaborative research and innovation projects under Cluster 4 (Digital, Industry and Space). Consortium of at least 3 partners from different EU member states."
-      tr: "Küme 4 (Dijital, Sanayi ve Uzay) kapsamında büyük ölçekli işbirlikçi araştırma ve inovasyon projeleri. En az 3 farklı AB üye devletinden ortaklık gerektirir."
+      en: "Competitive fellowships for international researchers at one of Europe's leading technical universities. Call 6 closes on 30 September 2026. Applicants must live outside Germany at submission and have finished their doctorate within the past three years or expect to finish within twelve months. Phase I is judged without a host letter; only shortlisted candidates need a TUM host in Phase II."
+      tr: "Avrupa'nın önde gelen teknik üniversitelerinden birinde uluslararası araştırmacılar için rekabetçi burslar. 6. çağrı 30 Eylül 2026'da kapanıyor. Başvuru anında Almanya dışında ikamet etmek ve doktorayı son üç yıl içinde bitirmiş olmak ya da on iki ay içinde bitirecek olmak gerekir. Birinci aşama ev sahibi mektubu olmadan değerlendirilir; TUM'da ev sahibi yalnızca ikinci aşamaya kalanlardan istenir."

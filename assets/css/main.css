@@ -426,6 +426,7 @@ p { margin: 0; }
 .funding-card__details dt { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink2); }
 .funding-card__details dd { margin: 0; font-size: 14px; }
 .funding-card__foot { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap; }
+.funding-verified { margin-top: var(--s5); font-family: var(--mono); font-size: 12px; color: var(--ink2); }
 
 /* Region / status chips */
 .chip--eu { border-color: var(--atl); color: var(--atl); }

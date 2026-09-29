@@ -27,6 +27,8 @@
     {{- $funder := .funder }}{{ if reflect.IsMap .funder }}{{ $funder = index .funder $lang | default (index .funder "en") }}{{ end }}
     {{- $desc := .description }}{{ if reflect.IsMap .description }}{{ $desc = index .description $lang | default (index .description "en") }}{{ end }}
     {{- $dur := .duration }}{{ if reflect.IsMap .duration }}{{ $dur = index .duration $lang | default (index .duration "en") }}{{ end }}
+    {{- $budget := .budget }}{{ if reflect.IsMap .budget }}{{ $budget = index .budget $lang | default (index .budget "en") }}{{ end }}
+    {{- $dlText := .deadline_text }}{{ if reflect.IsMap .deadline_text }}{{ $dlText = index .deadline_text $lang | default (index .deadline_text "en") }}{{ end }}
     {{- $deadlineStr := .deadline | default "" }}
     {{- $isExpired := false }}
     {{- if $deadlineStr }}{{ $isExpired = lt $deadlineStr $now }}{{ end }}
@@ -44,15 +46,12 @@
       </div>
       <p>{{ $desc }}</p>
       <dl class="funding-card__details">
-        {{- with $deadlineStr }}
-        <div><dt>{{ i18n "funding_deadline" }}</dt><dd>{{ . }}</dd></div>
-        {{- else }}
-        <div><dt>{{ i18n "funding_deadline" }}</dt><dd>{{ i18n "funding_rolling" }}</dd></div>
-        {{- end }}
+        {{- $dlShown := $dlText | default $deadlineStr | default (i18n "funding_rolling") }}
+        <div><dt>{{ i18n "funding_deadline" }}</dt><dd>{{ $dlShown }}</dd></div>
         {{- with $dur }}
         <div><dt>{{ i18n "duration" }}</dt><dd>{{ . }}</dd></div>
         {{- end }}
-        {{- with .budget }}
+        {{- with $budget }}
         <div><dt>{{ i18n "funding_budget" }}</dt><dd>{{ . }}</dd></div>
         {{- end }}
         {{- with .stage }}
@@ -68,6 +67,9 @@
   </ul>
   {{- else }}
   {{ partial "empty.html" (i18n "funding_empty") }}
+  {{- end }}
+  {{- with site.Data.funding.meta.verified }}
+  <p class="funding-verified">{{ i18n "funding_verified" }}: <time datetime="{{ . }}">{{ (time .) | time.Format ":date_long" }}</time></p>
   {{- end }}
 </div>
 </div>
