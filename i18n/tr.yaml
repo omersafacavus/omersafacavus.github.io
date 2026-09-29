@@ -122,3 +122,7 @@ funding_stage_any: "Herkes"
 funding_periodic: "Periyodik"
 funding_apply: "Detaylar"
 funding_empty: "Fon çağrıları hazırlanıyor."
+
+# Eklemeli Sanatlar
+additive_arts: "Eklemeli Sanatlar"
+additive_arts_tagline: "İmalatın yaratıcı pratikle buluştuğu alan."

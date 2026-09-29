@@ -122,3 +122,7 @@ funding_stage_any: "Any"
 funding_periodic: "Periodic"
 funding_apply: "Details"
 funding_empty: "Funding calls are being prepared."
+
+# Additive Arts
+additive_arts: "Additive Arts"
+additive_arts_tagline: "Where manufacturing meets creative practice."
