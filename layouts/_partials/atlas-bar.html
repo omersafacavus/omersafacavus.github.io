@@ -4,6 +4,7 @@
 {{- if eq $lang "tr" }}{{ $glossary = site.GetPage "/atlas/sozluk" }}{{ end }}
 {{- $paths := site.GetPage (cond (eq $lang "tr") "/atlas/ogrenme-yollari" "/atlas/paths") }}
 {{- $funding := site.GetPage (cond (eq $lang "tr") "/atlas/cagrilar" "/atlas/funding") }}
+{{- $confs := site.GetPage (cond (eq $lang "tr") "/atlas/konferanslar" "/atlas/conferences") }}
 <div class="atlas-bar">
   <div class="wrap">
     <a class="atlas-mark" href="{{ $atlas.RelPermalink }}">
@@ -17,6 +18,9 @@
       <a href="{{ $paths.RelPermalink }}"{{ if eq . $paths }} aria-current="page"{{ end }}>{{ i18n "paths" }}</a>
       {{- with $funding }}
       <a href="{{ .RelPermalink }}"{{ if eq $ . }} aria-current="page"{{ end }}>{{ i18n "funding" }}</a>
+      {{- end }}
+      {{- with $confs }}
+      <a href="{{ .RelPermalink }}"{{ if eq $ . }} aria-current="page"{{ end }}>{{ i18n "conferences" }}</a>
       {{- end }}
     </nav>
     {{- with $glossary }}

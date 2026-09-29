@@ -1,0 +1,121 @@
+{{- $lang := site.Language.Lang }}
+{{- $all := site.Data.conferences.events }}
+{{- $now := now.Format "2006-01-02" }}
+{{- /* Tarihi bilinenler kronolojik, bilinmeyenler sonda. */ -}}
+{{- $dated := slice }}
+{{- $undated := slice }}
+{{- range $all }}
+  {{- if .date_start }}{{ $dated = $dated | append . }}{{ else }}{{ $undated = $undated | append . }}{{ end }}
+{{- end }}
+{{- $events := (sort $dated "date_start") | append $undated }}
+<div class="atlas-page">
+{{ partial "atlas-bar.html" . }}
+<header class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="{{ (site.GetPage "/atlas").RelPermalink }}">Atlas</a><span aria-hidden="true">/</span></nav>
+    <h1>{{ i18n "conferences_title" }}</h1>
+    {{- with .Description }}<p>{{ . }}</p>{{ end }}
+  </div>
+</header>
+<div class="wrap article">
+  <div class="funding-filters" data-conf-filters>
+    <button class="chip chip--active" data-filter="all">{{ i18n "funding_all" }}</button>
+    <button class="chip" data-filter="cfp">{{ i18n "conf_status_cfp" }}</button>
+    <button class="chip" data-filter="academic">{{ i18n "conf_kind_academic" }}</button>
+    <button class="chip" data-filter="industry">{{ i18n "conf_kind_industry" }}</button>
+    <button class="chip" data-filter="eu">{{ i18n "funding_europe" }}</button>
+    <button class="chip" data-filter="tr">Türkiye</button>
+    <button class="chip" data-filter="us">{{ i18n "funding_usa" }}</button>
+  </div>
+  {{- if $events }}
+  <ul class="funding-list" data-conf-list>
+    {{- range $events }}
+    {{- $org := .organizer }}{{ if reflect.IsMap .organizer }}{{ $org = index .organizer $lang | default (index .organizer "en") }}{{ end }}
+    {{- $loc := .location }}{{ if reflect.IsMap .location }}{{ $loc = index .location $lang | default (index .location "en") }}{{ end }}
+    {{- $desc := .description }}{{ if reflect.IsMap .description }}{{ $desc = index .description $lang | default (index .description "en") }}{{ end }}
+    {{- $start := .date_start | default "" }}
+    {{- $end := .date_end | default $start }}
+    {{- $dl := .deadline | default "" }}
+    {{- $dlKind := .deadline_kind | default "" }}
+    {{- /* Durum tarihlerden çıkar: etkinlik geçti mi, çağrı hâlâ açık mı. */ -}}
+    {{- $status := "upcoming" }}
+    {{- if and $end (lt $end $now) }}{{ $status = "past" }}
+    {{- else if or (and $dl (ge $dl $now)) (eq $dlKind "open") }}{{ $status = "cfp" }}{{ end }}
+    <li class="funding-card conf-card{{ if eq $status "past" }} funding-card--closed{{ end }}" data-region="{{ .region }}" data-kind="{{ .kind }}" data-status="{{ $status }}">
+      <div class="funding-card__head">
+        <div class="funding-card__meta">
+          <span class="chip chip--{{ .region }}">{{ $org }}</span>
+          <span class="chip chip--kind-{{ .kind }}">{{ i18n (printf "conf_kind_%s" .kind) }}</span>
+          <span class="chip chip--conf-{{ $status }}">{{ i18n (printf "conf_status_%s" $status) }}</span>
+        </div>
+        <h3>{{ .name }}</h3>
+      </div>
+      <p>{{ $desc }}</p>
+      <dl class="funding-card__details">
+        <div>
+          <dt>{{ i18n "conf_when" }}</dt>
+          <dd>
+            {{- if $start -}}
+              {{- if eq $start $end -}}
+                {{ partial "fmt-date.html" $start }}
+              {{- else if eq (substr $start 0 7) (substr $end 0 7) -}}
+                {{ (time $start).Day }}–{{ partial "fmt-date.html" $end }}
+              {{- else -}}
+                {{ partial "fmt-date.html" $start }} – {{ partial "fmt-date.html" $end }}
+              {{- end -}}
+            {{- else -}}
+              {{ i18n "funding_tba" }}
+            {{- end -}}
+          </dd>
+        </div>
+        {{- with $loc }}
+        <div><dt>{{ i18n "conf_where" }}</dt><dd>{{ . }}</dd></div>
+        {{- end }}
+        <div>
+          <dt>{{ i18n "conf_deadline" }}</dt>
+          <dd>
+            {{- if $dl }}{{ partial "fmt-date.html" $dl }}
+            {{- else if $dlKind }}{{ i18n (printf "conf_dl_%s" $dlKind) }}
+            {{- else }}{{ i18n "funding_tba" }}{{ end -}}
+          </dd>
+        </div>
+        {{- with .frequency }}
+        <div><dt>{{ i18n "conf_frequency" }}</dt><dd>{{ i18n (printf "conf_freq_%s" .) }}</dd></div>
+        {{- end }}
+      </dl>
+      <div class="funding-card__foot">
+        {{- with .url }}<a class="btn btn--sm" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "funding_apply" }} →</a>{{ end }}
+      </div>
+    </li>
+    {{- end }}
+  </ul>
+  {{- else }}
+  {{ partial "empty.html" (i18n "conferences_empty") }}
+  {{- end }}
+  {{- with site.Data.conferences.meta.verified }}
+  <p class="funding-verified">{{ i18n "funding_verified" }}: <time datetime="{{ . }}">{{ partial "fmt-date.html" . }}</time></p>
+  {{- end }}
+</div>
+</div>
+<script>
+(function(){
+  var filters = document.querySelector('[data-conf-filters]');
+  if (!filters) return;
+  var list = document.querySelector('[data-conf-list]');
+  var cards = list ? list.querySelectorAll('.conf-card') : [];
+  filters.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-filter]');
+    if (!btn) return;
+    filters.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('chip--active'); });
+    btn.classList.add('chip--active');
+    var f = btn.getAttribute('data-filter');
+    cards.forEach(function(card){
+      if (f === 'all') { card.style.display = ''; return; }
+      var show = (card.getAttribute('data-region') === f ||
+                  card.getAttribute('data-kind') === f ||
+                  card.getAttribute('data-status') === f);
+      card.style.display = show ? '' : 'none';
+    });
+  });
+})();
+</script>

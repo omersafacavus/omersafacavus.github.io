@@ -3,6 +3,7 @@
 {{- if eq $lang "tr" }}{{ $glossary = site.GetPage "/atlas/sozluk" }}{{ end }}
 {{- $paths := site.GetPage (cond (eq $lang "tr") "/atlas/ogrenme-yollari" "/atlas/paths") }}
 {{- $funding := site.GetPage (cond (eq $lang "tr") "/atlas/cagrilar" "/atlas/funding") }}
+{{- $confs := site.GetPage (cond (eq $lang "tr") "/atlas/konferanslar" "/atlas/conferences") }}
 {{- $arts := site.GetPage (cond (eq $lang "tr") "/atlas/eklemeli-sanatlar" "/atlas/additive-arts") }}
 <div class="atlas-page">
 {{ partial "atlas-bar.html" . }}
@@ -33,6 +34,13 @@
         <span class="label">{{ i18n "funding" }} · {{ len site.Data.funding.calls }}</span>
         <h3>{{ i18n "funding_title" }}</h3>
         <p>{{ .Description }}</p>
+      </a>
+      {{- end }}
+      {{- with $confs }}
+      <a class="atlas-tile" href="{{ .RelPermalink }}">
+        <span class="label">{{ i18n "conferences" }} · {{ len site.Data.conferences.events }}</span>
+        <h3>{{ i18n "conferences" }}</h3>
+        <p>{{ i18n "conferences_tagline" }}</p>
       </a>
       {{- end }}
       {{- with $arts }}

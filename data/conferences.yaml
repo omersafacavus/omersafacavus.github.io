@@ -1,0 +1,226 @@
+# Eklemeli imalat alanındaki konferanslar ve etkinlikler.
+# kind: academic (hakemli bildiri) | industry (fuar, ticari etkinlik)
+# region: eu | tr | us | international
+# frequency: annual | biennial
+# date_start / date_end: ISO tarih. Bilinmiyorsa boş bırakılır, kart listenin
+#   sonunda "Henüz duyurulmadı" ile görünür.
+# deadline: bildiri özeti son tarihi, ISO. Bilinmiyorsa boş bırakılır.
+# deadline_kind: tarih yoksa nedenini söyler. none (bildiri çağrısı yok) |
+#   closed (bu dönem kapandı) | open (çağrı açık, kapanış tarihi yayımlanmamış).
+# Durum tarihlerden otomatik hesaplanır: çağrı açık / yaklaşan / geçti.
+meta:
+  verified: "2026-09-30"
+
+events:
+  - id: icaleo-2026
+    name: "ICALEO 2026"
+    organizer: "Laser Institute (LIA)"
+    kind: academic
+    region: us
+    frequency: annual
+    date_start: "2026-10-05"
+    date_end: "2026-10-08"
+    location:
+      en: "Denver, USA"
+      tr: "Denver, ABD"
+    deadline: ""
+    deadline_kind: closed
+    url: "https://icaleo.org/"
+    description:
+      en: "The US counterpart to LiM, covering laser materials processing and laser-based additive manufacturing for a mixed academic and industrial audience. Submissions for this edition have closed."
+      tr: "LiM'in ABD'deki karşılığı; lazerle malzeme işleme ve lazer tabanlı eklemeli imalatı akademi ile sanayinin bir arada olduğu bir kitleye taşır. Bu dönemin başvuruları kapandı."
+
+  - id: euro-pm-2026
+    name: "Euro PM2026"
+    organizer: "European Powder Metallurgy Association"
+    kind: academic
+    region: eu
+    frequency: annual
+    date_start: "2026-10-11"
+    date_end: "2026-10-14"
+    location:
+      en: "Budapest, Hungary"
+      tr: "Budapeşte, Macaristan"
+    deadline: "2026-01-21"
+    url: "https://www.epma.com/"
+    description:
+      en: "Europe's main powder metallurgy congress, with a substantial metal AM track and peer-reviewed papers. Abstracts for this edition closed in January 2026. Euro PM2027 is announced for Vienna with dates still to come, and the January abstract window is the reliable pattern."
+      tr: "Avrupa'nın başlıca toz metalurjisi kongresi; güçlü bir metal eklemeli imalat oturumu ve hakemli bildirileri var. Bu dönemin özetleri Ocak 2026'da kapandı. Euro PM2027'nin Viyana'da yapılacağı duyuruldu, tarihleri henüz açıklanmadı; ocak ayındaki özet penceresi tutarlı bir desen."
+
+  - id: formnext-2026
+    name: "Formnext 2026"
+    organizer: "Mesago Messe Frankfurt"
+    kind: industry
+    region: eu
+    frequency: annual
+    date_start: "2026-11-17"
+    date_end: "2026-11-20"
+    location:
+      en: "Frankfurt, Germany"
+      tr: "Frankfurt, Almanya"
+    deadline: ""
+    deadline_kind: none
+    url: "https://formnext.mesago.com/frankfurt/en.html"
+    description:
+      en: "The world's largest additive manufacturing trade show: machine launches, materials suppliers and business networking. There is no peer-reviewed track, so this is where you go to see hardware and meet vendors rather than to publish."
+      tr: "Dünyanın en büyük eklemeli imalat fuarı: makine lansmanları, malzeme tedarikçileri ve iş ağı kurma. Hakemli bir bildiri programı yok; buraya yayın yapmak için değil, donanımı görmek ve tedarikçilerle tanışmak için gidilir."
+
+  - id: amug-2027
+    name: "AMUG 2027"
+    organizer: "Additive Manufacturing Users Group"
+    kind: industry
+    region: us
+    frequency: annual
+    date_start: "2027-03-14"
+    date_end: "2027-03-18"
+    location:
+      en: "Atlantic City, USA"
+      tr: "Atlantic City, ABD"
+    deadline: "2026-10-21"
+    url: "https://www.amug.com/"
+    description:
+      en: "A practitioner community conference built around hands-on workshops and machine-operator know-how, with no peer review. The date shown is the call for speakers, not an abstract deadline. Useful for applications work, a weak fit if you need citable output."
+      tr: "Uygulamacı topluluğunun konferansı; uygulamalı atölyeler ve makine operatörü bilgisi üzerine kurulu, hakem süreci yok. Görünen tarih bildiri özeti değil, konuşmacı çağrısının son günü. Uygulama tarafında yararlı, atıf alacak çıktı arıyorsanız zayıf bir tercih."
+
+  - id: tms-2027
+    name: "TMS 2027"
+    organizer: "The Minerals, Metals & Materials Society"
+    kind: academic
+    region: us
+    frequency: annual
+    date_start: "2027-03-14"
+    date_end: "2027-03-18"
+    location:
+      en: "Orlando, USA"
+      tr: "Orlando, ABD"
+    deadline: "2026-07-01"
+    url: "https://www.tms.org/TMS2027"
+    description:
+      en: "A large academic materials science meeting with several dedicated AM symposia on process modelling, LPBF microstructure and qualification. Abstracts for 2027 closed on 1 July 2026; the same window is the pattern for TMS2028."
+      tr: "Süreç modelleme, LPBF mikroyapısı ve nitelendirme üzerine birkaç ayrı eklemeli imalat sempozyumu barındıran büyük bir akademik malzeme bilimi toplantısı. 2027 özetleri 1 Temmuz 2026'da kapandı; TMS2028 için de aynı pencere bekleniyor."
+
+  - id: rapid-tct-2027
+    name: "RAPID + TCT 2027"
+    organizer: "SME"
+    kind: industry
+    region: us
+    frequency: annual
+    date_start: "2027-04-12"
+    date_end: "2027-04-15"
+    location:
+      en: "Detroit, USA"
+      tr: "Detroit, ABD"
+    deadline: ""
+    deadline_kind: open
+    url: "https://www.rapid3devent.com/"
+    description:
+      en: "North America's largest additive manufacturing event, combining a trade show with an applied conference track. Industry-weighted with some academic presence. The call for speakers is open but its closing date is not published on the official site."
+      tr: "Kuzey Amerika'nın en büyük eklemeli imalat etkinliği; fuarı uygulamalı bir konferans programıyla birleştirir. Ağırlık sanayide, akademiden de katılım var. Konuşmacı çağrısı açık ancak kapanış tarihi resmi sitede yayımlanmamış."
+
+  - id: amc-turkiye-2027
+    name: "AMC Türkiye 2027"
+    organizer:
+      en: "Additive Manufacturing Conference Türkiye"
+      tr: "Eklemeli İmalat Konferansı"
+    kind: academic
+    region: tr
+    frequency: annual
+    date_start: ""
+    date_end: ""
+    location:
+      en: "Antalya, Türkiye"
+      tr: "Antalya, Türkiye"
+    deadline: ""
+    url: "https://amctr.org/"
+    description:
+      en: "Türkiye's main academic AM conference, held in English, with tracks on design and computation, processes and monitoring, and materials and applications. Accepts extended abstracts for oral or poster presentation plus an optional five-page full paper routed to JAMTECH for journal review. The 6th edition was held in April 2026 in Antalya; the 7th is planned for April 2027 with dates and the call not yet announced."
+      tr: "Türkiye'nin başlıca akademik eklemeli imalat konferansı; İngilizce yapılıyor ve tasarım ile hesaplama, süreçler ile izleme, malzemeler ile uygulamalar başlıkları altında oturumları var. Sözlü ya da poster sunum için genişletilmiş özet, isteğe bağlı olarak da JAMTECH dergi değerlendirmesine yönlendirilen beş sayfalık tam metin kabul ediyor. Altıncısı Nisan 2026'da Antalya'da yapıldı; yedincisi Nisan 2027 için planlanıyor, tarihler ve çağrı henüz duyurulmadı."
+
+  - id: ampm-2027
+    name: "AMPM2027"
+    organizer: "Metal Powder Industries Federation"
+    kind: academic
+    region: us
+    frequency: annual
+    date_start: "2027-06-20"
+    date_end: "2027-06-23"
+    location:
+      en: "Buffalo, USA"
+      tr: "Buffalo, ABD"
+    deadline: "2026-11-01"
+    url: "https://www.mpif.org/"
+    description:
+      en: "MPIF's metal additive manufacturing conference, co-located with PowderMet2027. Applied and industrial in tone but with real technical papers, and particularly strong on powder, binder jetting and sinter-based AM."
+      tr: "MPIF'in metal eklemeli imalat konferansı, PowderMet2027 ile aynı yerde yapılıyor. Tonu uygulamalı ve sanayi odaklı olsa da gerçek teknik bildiriler var; özellikle toz, binder jetting ve sinterleme temelli eklemeli imalatta güçlü."
+
+  - id: lim-2027
+    name: "LiM 2027"
+    organizer: "Wissenschaftliche Gesellschaft Lasertechnik (WLT)"
+    kind: academic
+    region: eu
+    frequency: biennial
+    date_start: "2027-06-21"
+    date_end: "2027-06-24"
+    location:
+      en: "Munich, Germany"
+      tr: "Münih, Almanya"
+    deadline: "2027-01-31"
+    url: "https://wlt.de/lim-conference"
+    description:
+      en: "WLT's European academic conference on laser materials processing, held every two years. Directly relevant if you work on beam shaping, scan strategies or melt pool physics in laser powder bed fusion."
+      tr: "WLT'nin iki yılda bir düzenlediği, lazerle malzeme işleme üzerine Avrupa merkezli akademik konferansı. Lazer toz yataklı füzyonda ışın şekillendirme, tarama stratejileri veya eriyik havuzu fiziği üzerine çalışıyorsanız doğrudan ilgili."
+
+  - id: sff-2027
+    name: "SFF Symposium 2027"
+    organizer:
+      en: "University of Texas at Austin / TMS"
+      tr: "Texas Üniversitesi Austin / TMS"
+    kind: academic
+    region: us
+    frequency: annual
+    date_start: ""
+    date_end: ""
+    location:
+      en: "Austin, USA"
+      tr: "Austin, ABD"
+    deadline: ""
+    url: "https://www.sffsymposium.org/"
+    description:
+      en: "The flagship peer-reviewed academic conference in additive manufacturing, with open-access proceedings and a heavy emphasis on process physics, LPBF, simulation and materials. The core venue for metal AM researchers. The 37th edition ran in August 2026; the 2027 edition is not yet announced, and abstracts for 2026 closed in May."
+      tr: "Eklemeli imalatın amiral gemisi niteliğindeki hakemli akademik konferansı; bildiriler açık erişimli ve ağırlık süreç fiziği, LPBF, simülasyon ile malzemelerde. Metal eklemeli imalat araştırmacıları için temel mecra. Otuz yedincisi Ağustos 2026'da yapıldı; 2027 dönemi henüz duyurulmadı, 2026 özetleri mayısta kapanmıştı."
+
+  - id: icam-2027
+    name: "ICAM 2027"
+    organizer: "ASTM International"
+    kind: academic
+    region: us
+    frequency: annual
+    date_start: "2027-09-20"
+    date_end: "2027-09-24"
+    location:
+      en: "Washington DC, USA"
+      tr: "Washington DC, ABD"
+    deadline: ""
+    url: "https://amcoe.org/calendar/"
+    description:
+      en: "ASTM's standards-driven conference, bridging academia, industry and the qualification and certification world. Stronger on standards, process qualification and industrialisation than SFF, and more applied. The 2027 call for abstracts is not yet announced."
+      tr: "ASTM'nin standart odaklı konferansı; akademiyi, sanayiyi ve nitelendirme ile belgelendirme dünyasını bir araya getirir. SFF'e kıyasla standartlar, süreç nitelendirme ve sanayileşmede daha güçlü ve daha uygulamalı. 2027 özet çağrısı henüz duyurulmadı."
+
+  - id: mst-2027
+    name: "MS&T27"
+    organizer:
+      en: "ACerS, AIST, ASM International and TMS"
+      tr: "ACerS, AIST, ASM International ve TMS"
+    kind: academic
+    region: us
+    frequency: annual
+    date_start: "2027-10-24"
+    date_end: "2027-10-27"
+    location:
+      en: "Pittsburgh, USA"
+      tr: "Pittsburgh, ABD"
+    deadline: "2027-05-01"
+    url: "https://www.matscitech.org/MST27"
+    description:
+      en: "A joint academic materials meeting run by four societies, with additive manufacturing symposia inside a broader materials scope than TMS. A good second option if the TMS abstract window has passed."
+      tr: "Dört derneğin birlikte düzenlediği akademik malzeme toplantısı; TMS'e göre daha geniş bir malzeme kapsamı içinde eklemeli imalat sempozyumları barındırıyor. TMS'in özet penceresi kaçtıysa iyi bir ikinci seçenek."
