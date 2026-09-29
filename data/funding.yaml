@@ -269,22 +269,19 @@ calls:
     type: fellowship
     stage: postdoc
     region: de
-    deadline: ""
-    deadline_text:
-      en: "Annual, late August (2025: 29 Aug)"
-      tr: "Yıllık, ağustos sonu (2025: 29 Ağustos)"
+    deadline: "2027-04-15"
     duration:
       en: "18 months (12 abroad + 6 Germany)"
       tr: "18 ay (12 yurt dışı + 6 Almanya)"
     budget:
-      en: "€4,000–5,000/month gross + allowances"
-      tr: "Brüt €4.000–5.000/ay + ödenekler"
+      en: "€5,000–6,400/month gross (TV-L E13)"
+      tr: "Brüt €5.000–6.400/ay (TV-L E13)"
     status: upcoming
     periodic: true
-    url: "https://www.daad.de/en/studying-in-germany/scholarships/daad-funding-programmes/prime/"
+    url: "https://www.daad.de/en/studying-in-germany/scholarships/daad-funding-programmes/prime/prime-applicants/"
     description:
-      en: "Funds a 12-month research phase abroad followed by a 6-month integration phase at a German university, on a fixed-term contract at TV-L pay grade 13 rather than a stipend. An expatriate allowance of roughly €1,200 to €2,000 a month applies during the phase abroad."
-      tr: "12 aylık yurt dışı araştırma aşamasını, Almanya'daki bir üniversitede 6 aylık entegrasyon aşaması izler; burs değil, TV-L 13 derecesinden süreli iş sözleşmesi sağlanır. Yurt dışı aşamasında aylık yaklaşık €1.200 ile €2.000 arasında yurt dışı ödeneği verilir."
+      en: "Funds a 12-month research phase abroad followed by a 6-month integration phase at a German university, on a fixed-term contract rather than a stipend, plus an expatriate allowance of about €1,500 to €2,800 a month while abroad. Eligibility changed for this round: you must have studied or worked in the German higher education or research system for at least three of the five years before the deadline, and apply within six years of your first PhD. There is no separate family support and no research or bench funding. The call is published in autumn 2026, the portal opens in January 2027, and funding starts between April and September 2028."
+      tr: "12 aylık yurt dışı araştırma aşamasını, Almanya'daki bir üniversitede 6 aylık entegrasyon aşaması izler; burs değil süreli iş sözleşmesi sağlanır ve yurt dışı aşamasında aylık yaklaşık €1.500 ile €2.800 arası yurt dışı ödeneği verilir. Bu dönemde uygunluk koşulu değişti: son başvurudan önceki beş yılın en az üçünde Alman yükseköğretim veya araştırma sisteminde okumuş ya da çalışmış olmak ve ilk doktoranızın üzerinden en fazla altı yıl geçmiş olması gerekiyor. Ayrı aile desteği ve araştırma gideri desteği yok. Çağrı 2026 sonbaharında yayımlanıyor, portal Ocak 2027'de açılıyor, destek Nisan ile Eylül 2028 arasında başlıyor."
 
   - id: tum-global-postdoc
     title:
