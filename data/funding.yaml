@@ -1,0 +1,249 @@
+# Araştırma fon çağrıları ve burs programları.
+# type: fellowship | grant | mobility | short-term
+# stage: phd | postdoc | senior | any
+# region: eu | tr | de | us | international
+# status: open | upcoming | closed
+# periodic: true = her yıl/dönem açılır
+calls:
+  - id: msca-postdoc-2027
+    title:
+      en: "MSCA Postdoctoral Fellowships 2027"
+      tr: "MSCA Doktora Sonrası Bursları 2027"
+    funder:
+      en: "European Commission"
+      tr: "Avrupa Komisyonu"
+    program: "Marie Skłodowska-Curie Actions"
+    type: fellowship
+    stage: postdoc
+    region: eu
+    deadline: "2027-09-10"
+    duration:
+      en: "12–24 months"
+      tr: "12–24 ay"
+    budget: "~€200,000"
+    status: upcoming
+    periodic: true
+    url: "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"
+    description:
+      en: "Individual fellowships for postdoctoral researchers to carry out research in a European or international host institution. European and Global Fellowships available."
+      tr: "Doktora sonrası araştırmacıların Avrupa'da veya uluslararası bir kurumda araştırma yapması için bireysel burslar. Avrupa ve Küresel Burs seçenekleri mevcut."
+
+  - id: erc-starting-2027
+    title:
+      en: "ERC Starting Grant 2027"
+      tr: "ERC Başlangıç Hibesi 2027"
+    funder:
+      en: "European Research Council"
+      tr: "Avrupa Araştırma Konseyi"
+    program: "Horizon Europe"
+    type: grant
+    stage: postdoc
+    region: eu
+    deadline: "2027-10-22"
+    duration:
+      en: "5 years"
+      tr: "5 yıl"
+    budget: "€1,500,000"
+    status: upcoming
+    periodic: true
+    url: "https://erc.europa.eu/apply-grant/starting-grant"
+    description:
+      en: "Funding for early-career researchers (2–7 years after PhD) to build their own research team and pursue frontier research."
+      tr: "Kariyerinin başındaki araştırmacıların (doktoradan 2–7 yıl sonra) kendi ekiplerini kurarak öncü araştırma yapması için hibe."
+
+  - id: erc-consolidator-2027
+    title:
+      en: "ERC Consolidator Grant 2027"
+      tr: "ERC Pekiştirme Hibesi 2027"
+    funder:
+      en: "European Research Council"
+      tr: "Avrupa Araştırma Konseyi"
+    program: "Horizon Europe"
+    type: grant
+    stage: senior
+    region: eu
+    deadline: "2027-01-01"
+    duration:
+      en: "5 years"
+      tr: "5 yıl"
+    budget: "€2,000,000"
+    status: upcoming
+    periodic: true
+    url: "https://erc.europa.eu/apply-grant/consolidator-grant"
+    description:
+      en: "Funding for mid-career researchers (7–12 years after PhD) to consolidate their research group and programme."
+      tr: "Kariyerinin ortasındaki araştırmacıların (doktoradan 7–12 yıl sonra) araştırma grubunu pekiştirmesi için hibe."
+
+  - id: tubitak-2232
+    title:
+      en: "TÜBİTAK 2232 International Fellowship for Outstanding Researchers"
+      tr: "TÜBİTAK 2232 Yurda Dönüş Araştırma Bursları"
+    funder: "TÜBİTAK"
+    program: "2232"
+    type: fellowship
+    stage: postdoc
+    region: tr
+    deadline: "2027-03-01"
+    duration:
+      en: "24 months"
+      tr: "24 ay"
+    budget: ""
+    status: upcoming
+    periodic: true
+    url: "https://www.tubitak.gov.tr/tr/burslar/doktora-sonrasi/burs-programlari/2232"
+    description:
+      en: "Fellowship programme to attract outstanding researchers working abroad back to Turkey or to bring international talent."
+      tr: "Yurt dışında çalışan başarılı araştırmacıları Türkiye'ye çekmek veya uluslararası yetenekleri getirmek için burs programı."
+
+  - id: tubitak-1001
+    title:
+      en: "TÜBİTAK 1001 Scientific and Technological Research Projects"
+      tr: "TÜBİTAK 1001 Bilimsel ve Teknolojik Araştırma Projeleri"
+    funder: "TÜBİTAK"
+    program: "1001"
+    type: grant
+    stage: any
+    region: tr
+    deadline: ""
+    duration:
+      en: "12–36 months"
+      tr: "12–36 ay"
+    budget: "₺2,400,000"
+    status: open
+    periodic: true
+    url: "https://www.tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1001"
+    description:
+      en: "Turkey's principal investigator-driven research grant programme, open to all scientific disciplines. Rolling deadline."
+      tr: "Tüm bilimsel disiplinlere açık, araştırmacı odaklı temel araştırma destek programı. Sürekli başvuruya açık."
+
+  - id: tubitak-1002
+    title:
+      en: "TÜBİTAK 1002 Short-Term R&D Funding"
+      tr: "TÜBİTAK 1002 Hızlı Destek Programı"
+    funder: "TÜBİTAK"
+    program: "1002"
+    type: grant
+    stage: any
+    region: tr
+    deadline: ""
+    duration:
+      en: "Up to 12 months"
+      tr: "12 aya kadar"
+    budget: "₺120,000"
+    status: open
+    periodic: true
+    url: "https://www.tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002"
+    description:
+      en: "Fast-track funding for short-term, well-scoped research projects. Rolling deadline."
+      tr: "Kısa süreli, kapsamı net araştırma projeleri için hızlı destek. Sürekli başvuruya açık."
+
+  - id: humboldt-postdoc
+    title:
+      en: "Alexander von Humboldt Research Fellowship"
+      tr: "Alexander von Humboldt Araştırma Bursu"
+    funder:
+      en: "Alexander von Humboldt Foundation"
+      tr: "Alexander von Humboldt Vakfı"
+    program: ""
+    type: fellowship
+    stage: postdoc
+    region: de
+    deadline: ""
+    duration:
+      en: "6–24 months"
+      tr: "6–24 ay"
+    budget: "€2,670/month + allowances"
+    status: open
+    periodic: true
+    url: "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship"
+    description:
+      en: "Fellowships for postdoctoral researchers of all nationalities to conduct long-term research in Germany. No deadline — applications reviewed continuously."
+      tr: "Tüm uluslardan doktora sonrası araştırmacıların Almanya'da uzun süreli araştırma yapması için burs. Son başvuru tarihi yok, başvurular sürekli değerlendirilir."
+
+  - id: daad-postdoc
+    title:
+      en: "DAAD Postdoctoral Researchers International Mobility Experience (PRIME)"
+      tr: "DAAD Doktora Sonrası Uluslararası Hareketlilik Deneyimi (PRIME)"
+    funder: "DAAD"
+    program: "PRIME"
+    type: fellowship
+    stage: postdoc
+    region: de
+    deadline: "2027-09-15"
+    duration:
+      en: "18 months (12 abroad + 6 Germany)"
+      tr: "18 ay (12 yurt dışı + 6 Almanya)"
+    budget: ""
+    status: upcoming
+    periodic: true
+    url: "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/prime/"
+    description:
+      en: "Postdoc programme combining an international research phase with a return phase at a German university."
+      tr: "Uluslararası bir araştırma aşamasını Almanya'daki bir üniversitede dönüş aşamasıyla birleştiren doktora sonrası programı."
+
+  - id: tum-global-postdoc
+    title:
+      en: "TUM Global Postdoc Fellowship"
+      tr: "TUM Küresel Doktora Sonrası Bursu"
+    funder:
+      en: "Technical University of Munich"
+      tr: "Münih Teknik Üniversitesi"
+    program: ""
+    type: fellowship
+    stage: postdoc
+    region: de
+    deadline: ""
+    duration:
+      en: "Up to 24 months"
+      tr: "24 aya kadar"
+    budget: ""
+    status: upcoming
+    periodic: true
+    url: "https://www.tum.de/en/research/postdocs/tum-postdoc-funding"
+    description:
+      en: "Competitive postdoctoral fellowships for international researchers at one of Europe's top technical universities."
+      tr: "Avrupa'nın önde gelen teknik üniversitelerinden birinde uluslararası araştırmacılar için rekabetçi doktora sonrası bursları."
+
+  - id: cost-actions
+    title:
+      en: "COST Actions — Open Call"
+      tr: "COST Eylemleri — Açık Çağrı"
+    funder: "COST Association"
+    program: "COST"
+    type: grant
+    stage: any
+    region: eu
+    deadline: "2027-10-29"
+    duration:
+      en: "4 years"
+      tr: "4 yıl"
+    budget: "€150,000/year (networking)"
+    status: upcoming
+    periodic: true
+    url: "https://www.cost.eu/funding/open-call/"
+    description:
+      en: "Funding for pan-European research networks. COST does not fund research itself but supports networking, workshops, short-term scientific missions and training schools."
+      tr: "Avrupa çapında araştırma ağları için finansman. COST araştırmanın kendisini finanse etmez ancak ağ oluşturma, atölyeler, kısa süreli bilimsel görevler ve eğitim okullarını destekler."
+
+  - id: horizon-collaborative
+    title:
+      en: "Horizon Europe Collaborative Projects"
+      tr: "Horizon Europe İşbirlikçi Projeler"
+    funder:
+      en: "European Commission"
+      tr: "Avrupa Komisyonu"
+    program: "Horizon Europe Cluster 4"
+    type: grant
+    stage: any
+    region: eu
+    deadline: ""
+    duration:
+      en: "36–48 months"
+      tr: "36–48 ay"
+    budget: "€3–8M (consortium)"
+    status: upcoming
+    periodic: true
+    url: "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/horizon"
+    description:
+      en: "Large-scale collaborative research and innovation projects under Cluster 4 (Digital, Industry and Space). Consortium of at least 3 partners from different EU member states."
+      tr: "Küme 4 (Dijital, Sanayi ve Uzay) kapsamında büyük ölçekli işbirlikçi araştırma ve inovasyon projeleri. En az 3 farklı AB üye devletinden ortaklık gerektirir."

@@ -1,6 +1,8 @@
 {{- $lang := site.Language.Lang }}
-{{- $glossary := site.GetPage (cond (eq $lang "tr") "/atlas/sozluk" "/atlas/glossary") }}
+{{- $glossary := false }}
+{{- if eq $lang "tr" }}{{ $glossary = site.GetPage "/atlas/sozluk" }}{{ end }}
 {{- $paths := site.GetPage (cond (eq $lang "tr") "/atlas/ogrenme-yollari" "/atlas/paths") }}
+{{- $funding := site.GetPage (cond (eq $lang "tr") "/atlas/cagrilar" "/atlas/funding") }}
 <div class="atlas-page">
 {{ partial "atlas-bar.html" . }}
 <header class="page-head atlas-hero">
@@ -13,16 +15,25 @@
 <section class="section">
   <div class="wrap">
     <div class="atlas-grid">
-      <a class="atlas-tile" href="{{ $glossary.RelPermalink }}">
-        <span class="label">{{ i18n "glossary" }} · {{ len $glossary.RegularPages }}</span>
+      {{- with $glossary }}
+      <a class="atlas-tile" href="{{ .RelPermalink }}">
+        <span class="label">{{ i18n "glossary" }} · {{ len .RegularPages }}</span>
         <h3>{{ i18n "glossary_title" }}</h3>
-        <p>{{ $glossary.Description }}</p>
+        <p>{{ .Description }}</p>
       </a>
+      {{- end }}
       <a class="atlas-tile" href="{{ $paths.RelPermalink }}">
         <span class="label">{{ i18n "paths" }} · {{ len site.Data.atlas.paths }}</span>
         <h3>{{ i18n "paths" }}</h3>
         <p>{{ $paths.Description }}</p>
       </a>
+      {{- with $funding }}
+      <a class="atlas-tile" href="{{ .RelPermalink }}">
+        <span class="label">{{ i18n "funding" }} · {{ len site.Data.funding.calls }}</span>
+        <h3>{{ i18n "funding_title" }}</h3>
+        <p>{{ .Description }}</p>
+      </a>
+      {{- end }}
       <div class="atlas-tile">
         <span class="label">{{ i18n "atlas_processes" }} · {{ i18n "atlas_topics" }}</span>
         <h3>{{ i18n "atlas_processes" }}</h3>

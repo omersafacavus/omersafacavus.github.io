@@ -12,7 +12,7 @@ offers:
       tr: ["Proses parametreleri ve enerji yoğunluğu", "Tarama stratejileri", "Destek yapıları ve artık gerilme"]
     status: planned
   - id: parametric-modeling
-    title: { en: "Parametric modeling for AM with Grasshopper and C#", tr: "Grasshopper ve C# ile eklemeli imalat için parametrik modelleme" }
+    title: { en: "Parametric modeling with Grasshopper and C#", tr: "Grasshopper ve C# ile parametrik modelleme" }
     format: online
     audience: { en: "Designers and researchers", tr: "Tasarımcılar ve araştırmacılar" }
     duration: { en: "[duration]", tr: "[süre]" }

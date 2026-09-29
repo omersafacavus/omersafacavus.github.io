@@ -1,5 +1,5 @@
 {{- $lang := site.Language.Lang }}
-{{- $other := cond (eq $lang "tr") "en" "tr" }}
+{{- $other := "en" }}
 {{- $d := partial "term-data.html" .Params.termid }}
 <div class="atlas-page">
 {{ partial "atlas-bar.html" . }}
@@ -13,8 +13,8 @@
   <div class="term-card">
     <div class="prose">{{ .Content }}</div>
     <dl>
-      <dt>{{ cond (eq $lang "tr") (i18n "in_english") (i18n "in_turkish") }}</dt>
-      <dd lang="{{ $other }}">{{ with index (partial "alternates.html" .) 0 }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ else }}{{ (index $d $other).term }}{{ end }}</dd>
+      <dt>{{ i18n "in_english" }}</dt>
+      <dd lang="en">{{ (index $d "en").term }}</dd>
       {{- with $d.abbr }}<dt>{{ i18n "abbreviation" }}</dt><dd>{{ . }}</dd>{{ end }}
       {{- with $d.synonyms }}{{ with index . $lang }}<dt>{{ i18n "synonyms" }}</dt><dd>{{ delimit . ", " }}</dd>{{ end }}{{ end }}
       {{- with $d.see }}<dt>{{ i18n "see_also" }}</dt><dd>{{ range $i, $id := . }}{{ with partial "term-url.html" $id }}{{ if $i }}, {{ end }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ end }}</dd>{{ end }}

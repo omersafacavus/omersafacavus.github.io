@@ -404,6 +404,45 @@ p { margin: 0; }
 .res-group h2 { font-weight: 500; }
 
 
+/* ── Fon çağrıları ────────────────────────────────────────── */
+.funding-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: var(--s6); }
+.funding-filters .chip { cursor: pointer; background: transparent; color: var(--ink); font: inherit; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; padding: 6px 12px; border: 1px solid var(--line); min-height: var(--tap); display: inline-flex; align-items: center; }
+.funding-filters .chip:hover { border-color: var(--atl); color: var(--atl); }
+.funding-filters .chip--active { background: var(--atl); border-color: var(--atl); color: var(--inv); }
+
+.funding-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--s5); }
+.funding-card { border: 1px solid var(--line); background: var(--sf); padding: var(--s5); display: flex; flex-direction: column; gap: var(--s4); }
+.funding-card:hover { border-color: var(--atl); }
+.funding-card--closed { opacity: .55; }
+.funding-card__head { display: flex; flex-direction: column; gap: var(--s3); }
+.funding-card__meta { display: flex; flex-wrap: wrap; gap: 6px; }
+.funding-card__meta .chip { font-size: 10px; padding: 2px 6px; }
+.funding-card h3 { font-size: var(--fs-lg); font-weight: 650; line-height: 1.3; }
+.funding-card > p { font-size: 15px; color: var(--ink2); }
+.funding-card__details { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--s2) var(--s5); margin: 0; border-top: 1px solid var(--line); padding-top: var(--s4); }
+.funding-card__details > div { display: flex; flex-direction: column; gap: 2px; }
+.funding-card__details dt { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink2); }
+.funding-card__details dd { margin: 0; font-size: 14px; }
+.funding-card__foot { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap; }
+
+/* Region / status chips */
+.chip--eu { border-color: var(--atl); color: var(--atl); }
+.chip--tr { border-color: var(--acc); color: var(--acc); }
+.chip--de { border-color: #D4A017; color: #D4A017; }
+.chip--us { border-color: #2563EB; color: #2563EB; }
+.chip--international { border-color: var(--ink2); color: var(--ink2); }
+.chip--status-open { background: #15803D; border-color: #15803D; color: #fff; }
+.chip--status-upcoming { border-color: var(--atl); color: var(--atl); }
+.chip--status-closed { border-color: var(--ink2); color: var(--ink2); }
+.chip--periodic { border-style: dashed; border-color: var(--atl); color: var(--atl); }
+
+.btn--sm { min-height: 36px; padding: 0 var(--s4); font-size: 14px; font-weight: 600; border: 1px solid var(--ink); display: inline-flex; align-items: center; gap: var(--s2); cursor: pointer; background: transparent; color: var(--ink); font-family: inherit; }
+.btn--sm:hover { background: var(--atl); border-color: var(--atl); color: var(--inv); }
+
+@media (max-width: 640px) {
+  .funding-card__details { grid-template-columns: 1fr 1fr; }
+}
+
 /* Footer'daki bölüm menüsü */
 .foot-nav { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: var(--s4) var(--s6); padding-top: var(--s6); border-top: 1px solid var(--line); font-size: 15px; font-weight: 600; }
 .foot-nav a:hover { color: var(--acc); }
