@@ -1,7 +1,7 @@
 # Projeler
 # status: live | developing | planned   (yayında | geliştiriliyor | planlanıyor)
 # github / demo: boşsa gösterilmez.
-# figure: kart üstündeki çizim — hatch | ring | signal | none
+# figure: kart üstündeki çizim · hatch | ring | signal | none
 - id: parametric-slicer
   title: { en: "Parametric slicer and design–simulation framework", tr: "Parametrik dilimleyici ve tasarım–simülasyon çerçevesi" }
   summary: { en: "An end-to-end environment from part geometry to scan paths, from simulation inputs to build-machine files.", tr: "Parça geometrisinden tarama yollarına, termal simülasyon girdilerinden makine dosyasına uçtan uca ortam." }

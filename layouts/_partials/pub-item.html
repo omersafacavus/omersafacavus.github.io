@@ -7,7 +7,7 @@
   <span class="pub-year">{{ $pub.year }}</span>
   <div>
     <div class="pub-title">{{ with $href }}<a href="{{ . }}">{{ $pub.title }}</a>{{ else }}{{ $pub.title }}{{ end }}</div>
-    <div class="pub-meta">{{ $authors | safeHTML }} — <i>{{ $pub.venue }}</i>{{ with $pub.details }}, {{ . }}{{ end }}</div>
+    <div class="pub-meta">{{ $authors | safeHTML }} · <i>{{ $pub.venue }}</i>{{ with $pub.details }}, {{ . }}{{ end }}</div>
   </div>
   <div class="pub-side">
     <span class="chip {{ if $solid }}chip--solid{{ else }}chip--dashed{{ end }}">{{ i18n (printf "status_%s" $pub.status) }}</span>

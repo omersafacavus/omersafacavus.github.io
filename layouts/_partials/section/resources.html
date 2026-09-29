@@ -7,7 +7,7 @@
   {{- $items := where $r.items "category" $cat.id }}
   {{- with $items }}
   <section class="res-group" aria-labelledby="cat-{{ $cat.id }}">
-    <h2 class="label label-block" id="cat-{{ $cat.id }}">{{ partial "t.html" (dict "v" $cat.title "lang" $lang) }} — {{ len . }}</h2>
+    <h2 class="label label-block" id="cat-{{ $cat.id }}">{{ partial "t.html" (dict "v" $cat.title "lang" $lang) }} · {{ len . }}</h2>
     <ul class="res">
       {{- range sort . "name" }}
       <li>

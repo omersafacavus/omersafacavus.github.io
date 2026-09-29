@@ -79,7 +79,7 @@
     <ol class="split-body rows">
       {{- range site.Data.experience }}
       <li class="row">
-        <span class="when">{{ .start }} — {{ .end | default (i18n "present") }}</span>
+        <span class="when">{{ .start }}–{{ .end | default (i18n "present") }}</span>
         <div>
           <h3>{{ partial "t.html" (merge $t (dict "v" .role)) }}</h3>
           <div class="org">{{ partial "t.html" (merge $t (dict "v" .org)) }}</div>
@@ -97,7 +97,7 @@
     <ol class="split-body rows">
       {{- range site.Data.education }}
       <li class="row">
-        <span class="when">{{ if eq .start .end }}{{ .start }}{{ else }}{{ .start }} — {{ .end | default (i18n "present") }}{{ end }}</span>
+        <span class="when">{{ if eq .start .end }}{{ .start }}{{ else }}{{ .start }}–{{ .end | default (i18n "present") }}{{ end }}</span>
         <div>
           <h3>{{ partial "t.html" (merge $t (dict "v" .degree)) }}</h3>
           <div class="org">{{ partial "t.html" (merge $t (dict "v" .org)) }}</div>

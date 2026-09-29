@@ -1,4 +1,4 @@
-# Ömer Safa Çavuş — kişisel site ve İmalat Atlası
+# Ömer Safa Çavuş · kişisel site ve İmalat Atlası
 
 İki dilli (İngilizce `/`, Türkçe `/tr/`) statik site. [Hugo](https://gohugo.io) ile üretilir ve GitHub Pages'te yayımlanır. İçeriğin tamamı `data/` klasöründeki YAML dosyalarında ve `content/` klasöründeki Markdown dosyalarında durur. Kod bilmeden güncellenebilir.
 

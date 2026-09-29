@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────────────────────────
-#  Ömer Safa Çavuş — kişisel site ve İmalat Atlası
+#  Ömer Safa Çavuş · kişisel site ve İmalat Atlası
 #  Kendi alan adınıza geçtiğinizde yalnızca baseURL'i değiştirin.
 # ─────────────────────────────────────────────────────────────
 baseURL = "https://omersafacavus.github.io/"
@@ -27,7 +27,7 @@ timeZone = "Europe/Istanbul"
     languageCode = "en"
     contentDir = "content/en"
     weight = 1
-    title = "Ömer Safa Çavuş — Manufacturing Engineer"
+    title = "Ömer Safa Çavuş · Manufacturing Engineer"
     [languages.en.params]
       description = "Manufacturing engineer building physics-based models for metal additive manufacturing and laser powder bed fusion: scan strategies, thermal simulation, microstructure and machine learning."
       atlasName = "Manufacturing Atlas"
@@ -70,7 +70,7 @@ timeZone = "Europe/Istanbul"
     languageCode = "tr"
     contentDir = "content/tr"
     weight = 2
-    title = "Ömer Safa Çavuş — İmalat Mühendisi"
+    title = "Ömer Safa Çavuş · İmalat Mühendisi"
     [languages.tr.params]
       description = "Metal eklemeli imalat ve toz yataklı lazer füzyon (metal 3D baskı) için fizik tabanlı modeller geliştiren imalat mühendisi: tarama stratejileri, termal simülasyon, mikroyapı ve makine öğrenmesi."
       atlasName = "İmalat Atlası"

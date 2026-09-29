@@ -13,7 +13,7 @@
 {{ range $r.categories }}{{ $cat := . }}{{ with where $r.items "category" $cat.id }}
 ## {{ partial "t.html" (dict "v" $cat.title "lang" $lang) }}
 {{ range sort . "name" }}
-- [{{ .name }}]({{ .url }}) — {{ partial "t.html" (dict "v" .description "lang" $lang) }} `{{ partial "t.html" (dict "v" .platform "lang" $lang) }}` `{{ partial "t.html" (dict "v" .license "lang" $lang) }}`{{ end }}
+- [{{ .name }}]({{ .url }}) · {{ partial "t.html" (dict "v" .description "lang" $lang) }} `{{ partial "t.html" (dict "v" .platform "lang" $lang) }}` `{{ partial "t.html" (dict "v" .license "lang" $lang) }}`{{ end }}
 {{ end }}{{ end }}
 ## {{ if eq $lang "tr" }}Katkı{{ else }}Contributing{{ end }}
 
