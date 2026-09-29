@@ -1,6 +1,9 @@
+{{- $lang := site.Language.Lang }}
 {{- $atlas := site.GetPage "/atlas" }}
-{{- $glossary := site.GetPage (cond (eq site.Language.Lang "tr") "/atlas/sozluk" "/atlas/glossary") }}
-{{- $paths := site.GetPage (cond (eq site.Language.Lang "tr") "/atlas/ogrenme-yollari" "/atlas/paths") }}
+{{- $glossary := false }}
+{{- if eq $lang "tr" }}{{ $glossary = site.GetPage "/atlas/sozluk" }}{{ end }}
+{{- $paths := site.GetPage (cond (eq $lang "tr") "/atlas/ogrenme-yollari" "/atlas/paths") }}
+{{- $funding := site.GetPage (cond (eq $lang "tr") "/atlas/cagrilar" "/atlas/funding") }}
 <div class="atlas-bar">
   <div class="wrap">
     <a class="atlas-mark" href="{{ $atlas.RelPermalink }}">
@@ -8,13 +11,20 @@
       {{ site.Params.atlasName }}
     </a>
     <nav class="atlas-nav" aria-label="{{ site.Params.atlasName }}">
-      <a href="{{ $glossary.RelPermalink }}"{{ if or (eq . $glossary) (eq .Parent $glossary) }} aria-current="page"{{ end }}>{{ i18n "glossary" }}</a>
+      {{- with $glossary }}
+      <a href="{{ .RelPermalink }}"{{ if or (eq $ .) (eq $.Parent .) }} aria-current="page"{{ end }}>{{ i18n "glossary" }}</a>
+      {{- end }}
       <a href="{{ $paths.RelPermalink }}"{{ if eq . $paths }} aria-current="page"{{ end }}>{{ i18n "paths" }}</a>
+      {{- with $funding }}
+      <a href="{{ .RelPermalink }}"{{ if eq $ . }} aria-current="page"{{ end }}>{{ i18n "funding" }}</a>
+      {{- end }}
     </nav>
-    <form class="atlas-search" role="search" action="{{ $glossary.RelPermalink }}" method="get">
+    {{- with $glossary }}
+    <form class="atlas-search" role="search" action="{{ .RelPermalink }}" method="get">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
       <label class="visually-hidden" for="atlas-q">{{ i18n "atlas_search" }}</label>
-      <input id="atlas-q" type="search" name="q" placeholder="{{ i18n "atlas_search" }}"{{ if eq . $glossary }} data-terms-filter{{ end }}>
+      <input id="atlas-q" type="search" name="q" placeholder="{{ i18n "atlas_search" }}"{{ if eq $ . }} data-terms-filter{{ end }}>
     </form>
+    {{- end }}
   </div>
 </div>
