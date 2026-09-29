@@ -21,8 +21,9 @@
   authors: "Cavus, O. S., Khalilvandi Behrouzyar, S., & Koc, B."
   title: "Prediction of cooling rates based on integrated scanning strategies with sophisticated parametric modeling-assisted simulation for additive manufacturing"
   venue: "Progress in Additive Manufacturing"
+  details: "11(5), 4839–4866"
   status: published
-  doi: ""
+  doi: "10.1007/s40964-026-01625-8"
   url: ""
   areas: [scan-strategies, thermal-simulation, microstructure]
   featured: true
@@ -32,8 +33,9 @@
   authors: "Cavus, O. S., Khalilvandi Behrouzyar, S., Javidrad, H. R., & Koc, B."
   title: "Continuous parametric scanning with thermal modeling to minimize stitch zone defects in laser beam powder bed fusion validated by multi-scale X-ray CT"
   venue: "Additive Manufacturing"
+  details: "119, 105120"
   status: published
-  doi: ""
+  doi: "10.1016/j.addma.2026.105120"
   url: ""
   areas: [scan-strategies, thermal-simulation, microstructure]
   featured: true
@@ -43,8 +45,9 @@
   authors: "Kendibilir, A., Khalilvandi Behrouzyar, S., Cavus, O. S., Lahe Motlagh, P., Koc, B., & Kefal, A."
   title: "Enhancing mechanical performance of metal additively manufactured structures via peridynamic topology optimization and thermo-mechanical process simulation with experimental validation"
   venue: "Computers & Structures"
+  details: "320, 108032"
   status: published
-  doi: ""
+  doi: "10.1016/j.compstruc.2025.108032"
   url: ""
   areas: [topology-optimization]
   featured: true
@@ -55,7 +58,7 @@
   title: "Minimizing thermally induced residual stresses in metal additive manufacturing through peridynamics topology optimization"
   venue: "Engineering with Computers"
   status: published
-  doi: ""
+  doi: "10.1007/s00366-025-02110-6"
   url: ""
   areas: [topology-optimization]
   featured: true
@@ -66,7 +69,7 @@
   title: "Functional island scanning strategy for powder bed fusion"
   venue: "Journal of Additive Manufacturing Technologies"
   status: published
-  doi: ""
+  doi: "10.18416/JAMTECH.24121160"
   url: ""
   areas: [scan-strategies]
   featured: true
@@ -78,7 +81,7 @@
   venue: "Journal of Additive Manufacturing Technologies"
   details: "2(1), 704"
   status: published
-  doi: ""
+  doi: "10.18416/JAMTECH.2212704"
   url: ""
   areas: [topology-optimization]
   featured: true

@@ -22,16 +22,15 @@ lead:
 availability:
   en: "Open to projects and collaborations"
   tr: "Projelere ve iş birliklerine açık"
-focus:
-  en: "PBF-LB · simulation"
-  tr: "PBF-LB · simülasyon"
 about:
   en:
-    - "I am completing an Integrated Ph.D. in Manufacturing Engineering at Sabancı University. I developed an in-house parametric framework that connects part design, scan-path generation, thermal simulation and build-file export, and I validate my models with X-ray CT, XRD, SEM and mechanical testing."
-    - "At Machina3D I worked on additive manufacturing process design and aluminum casting. Today I work on beam shaping, machine learning for process monitoring, and other metal additive processes such as DED, cold spray and EBM."
+    - "I am completing an Integrated Ph.D. in Manufacturing Engineering at Sabancı University under Prof. Bahattin Koç. My work follows the process–structure–property–performance chain in metal additive manufacturing, with a focus on physics-based models for laser beam powder bed fusion."
+    - "At its core is an in-house parametric framework that connects design, simulation and manufacturing: a slicer I wrote from scratch generates scan paths from the part geometry, prepares the thermal simulation inputs and exports the build files. With it I predict cooling and solidification rates, link them to grain structure through kinetic Monte Carlo, and design scan strategies that reduce stitch-zone defects, validating the results with multi-scale X-ray CT, XRD, SEM and mechanical testing."
+    - "I also work on process-aware topology optimization, beam shaping and machine learning on detector signals. At Machina3D I took this into industry, from additive manufacturing process and support design to automated mold design and heat treatment for aluminum casting."
   tr:
-    - "Sabancı Üniversitesi'nde İmalat Mühendisliği bütünleşik doktoramı tamamlıyorum. Parça tasarımını, tarama yolu üretimini, termal simülasyonu ve makine dosyası çıktısını tek bir ortamda birleştiren parametrik bir çerçeve geliştirdim; modellerimi X-ışını BT, XRD, SEM ve mekanik testlerle doğruluyorum."
-    - "Machina3D'de eklemeli imalat proses tasarımı ve alüminyum döküm üzerine çalıştım. Bugün ışın şekillendirme, proses izleme için makine öğrenmesi ve DED, soğuk püskürtme, EBM gibi diğer metal eklemeli imalat yöntemleri üzerinde çalışıyorum."
+    - "Sabancı Üniversitesi'nde Prof. Dr. Bahattin Koç danışmanlığında İmalat Mühendisliği bütünleşik doktoramı tamamlıyorum. Çalışmalarım metal eklemeli imalatta proses–yapı–özellik–performans zincirini izliyor; odağımda toz yataklı lazer füzyon için fizik tabanlı modeller var."
+    - "Bu çalışmaların merkezinde tasarım, simülasyon ve üretimi birleştiren parametrik bir çerçeve duruyor: sıfırdan yazdığım dilimleyici parça geometrisinden tarama yollarını üretiyor, termal simülasyon girdilerini hazırlıyor ve makine dosyasını çıkarıyor. Bu çerçeveyle soğuma ve katılaşma hızlarını tahmin ediyor, kinetik Monte Carlo ile tane yapısına bağlıyor ve dikiş bölgesi kusurlarını azaltan tarama stratejileri tasarlıyorum; sonuçları çok ölçekli X-ışını BT, XRD, SEM ve mekanik testlerle doğruluyorum."
+    - "Proses odaklı topoloji optimizasyonu, ışın şekillendirme ve dedektör sinyalleri üzerinde makine öğrenmesi de çalıştığım konular arasında. Machina3D'de bu birikimi sanayiye taşıdım: eklemeli imalatta proses ve destek yapısı tasarımından alüminyum dökümde otomatik kalıp tasarımı ve ısıl işleme kadar."
 # Bağlantılar: url boş bırakılırsa gösterilmez.
 links:
   - { name: "LinkedIn", url: "https://www.linkedin.com/in/cavusomersafa" }

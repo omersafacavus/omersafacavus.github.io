@@ -168,7 +168,7 @@ p { margin: 0; }
 .hero-row { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--s5); align-items: end; row-gap: var(--s5); }
 .hero-lead { grid-column: span 7; font-size: clamp(1.125rem, 1rem + .6vw, 1.375rem); line-height: 1.45; }
 .hero-actions { grid-column: span 5; display: flex; gap: var(--s3); justify-content: flex-end; flex-wrap: wrap; }
-.strip { margin-top: var(--s4); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 12px; }
+.strip { margin-top: var(--s4); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 12px; }
 .strip > div { padding: 14px var(--s4); border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: var(--s1); }
 .strip > div:first-child { padding-left: 0; }
 .strip > div:last-child { border-right: 0; }
@@ -180,9 +180,8 @@ p { margin: 0; }
   .hero-actions { justify-content: flex-start; }
   .hero-actions .btn { flex: 1 1 200px; justify-content: space-between; }
   .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .strip > div:nth-child(2) { border-right: 0; }
-  .strip > div:nth-child(3) { padding-left: 0; }
-  .strip > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .strip > div:first-child { grid-column: 1 / -1; border-right: 0; border-bottom: 1px solid var(--line); }
+  .strip > div:nth-child(2) { padding-left: 0; }
 }
 
 /* ── Hakkımda ───────────────────────────────────────────────── */

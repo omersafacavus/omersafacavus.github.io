@@ -11,7 +11,7 @@
   </div>
   <div class="pub-side">
     <span class="chip {{ if $solid }}chip--solid{{ else }}chip--dashed{{ end }}">{{ i18n (printf "status_%s" $pub.status) }}</span>
-    {{- with $pub.doi }}<a href="https://doi.org/{{ . }}">DOI {{ . }}</a>{{ end }}
+    {{- with $pub.doi }}<a href="https://doi.org/{{ . }}" title="doi:{{ . }}">DOI ↗</a>{{ end }}
     {{- with $pub.pdf }}<a href="{{ . | relURL }}">PDF</a>{{ end }}
   </div>
 </li>
