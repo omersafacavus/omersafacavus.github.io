@@ -127,6 +127,8 @@ p { margin: 0; }
   .nav a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
   .nav a:last-child { border-bottom: 0; }
   .site-header[data-open="true"] .nav { display: flex; }
+  .site-header::after { content: ""; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: -1; opacity: 0; pointer-events: none; transition: opacity .2s; }
+  .site-header[data-open="true"]::after { opacity: 1; pointer-events: auto; }
 }
 .brand-short { display: none; }
 

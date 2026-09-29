@@ -32,6 +32,13 @@
       menuBtn.setAttribute("aria-expanded", String(!open));
       menuBtn.setAttribute("aria-label", open ? menuBtn.dataset.labelOpen : menuBtn.dataset.labelClose);
     });
+    header.addEventListener("click", function (e) {
+      if (e.target === header && header.getAttribute("data-open") === "true") {
+        header.setAttribute("data-open", "false");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", menuBtn.dataset.labelOpen);
+      }
+    });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && header.getAttribute("data-open") === "true") {
         header.setAttribute("data-open", "false");
