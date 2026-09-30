@@ -5,6 +5,7 @@
 {{- $funding := site.GetPage (cond (eq $lang "tr") "/atlas/cagrilar" "/atlas/funding") }}
 {{- $confs := site.GetPage (cond (eq $lang "tr") "/atlas/konferanslar" "/atlas/conferences") }}
 {{- $arts := site.GetPage (cond (eq $lang "tr") "/atlas/eklemeli-sanatlar" "/atlas/additive-arts") }}
+{{- $res := site.GetPage (cond (eq $lang "tr") "/kaynaklar" "/resources") }}
 <div class="atlas-page">
 {{ partial "atlas-bar.html" . }}
 <header class="page-head atlas-hero">
@@ -19,26 +20,26 @@
     <div class="atlas-grid">
       {{- with $glossary }}
       <a class="atlas-tile" href="{{ .RelPermalink }}">
-        <span class="label">{{ i18n "glossary" }} · {{ len .RegularPages }}</span>
+        <span class="label">{{ i18n "glossary" }}{{ with len .RegularPages }} · {{ . }}{{ end }}</span>
         <h3>{{ i18n "glossary_title" }}</h3>
         <p>{{ .Description }}</p>
       </a>
       {{- end }}
       <a class="atlas-tile" href="{{ $paths.RelPermalink }}">
-        <span class="label">{{ i18n "paths" }} · {{ len site.Data.atlas.paths }}</span>
+        <span class="label">{{ i18n "paths" }}{{ with len site.Data.atlas.paths }} · {{ . }}{{ end }}</span>
         <h3>{{ i18n "paths" }}</h3>
         <p>{{ $paths.Description }}</p>
       </a>
       {{- with $funding }}
       <a class="atlas-tile" href="{{ .RelPermalink }}">
-        <span class="label">{{ i18n "funding" }} · {{ len site.Data.funding.calls }}</span>
+        <span class="label">{{ i18n "funding" }}{{ with len site.Data.funding.calls }} · {{ . }}{{ end }}</span>
         <h3>{{ i18n "funding_title" }}</h3>
         <p>{{ .Description }}</p>
       </a>
       {{- end }}
       {{- with $confs }}
       <a class="atlas-tile" href="{{ .RelPermalink }}">
-        <span class="label">{{ i18n "conferences" }} · {{ len site.Data.conferences.events }}</span>
+        <span class="label">{{ i18n "conferences" }}{{ with len site.Data.conferences.events }} · {{ . }}{{ end }}</span>
         <h3>{{ i18n "conferences" }}</h3>
         <p>{{ i18n "conferences_tagline" }}</p>
       </a>
@@ -48,6 +49,13 @@
         <span class="label">{{ i18n "additive_arts" }}</span>
         <h3>{{ i18n "additive_arts" }}</h3>
         <p>{{ i18n "additive_arts_tagline" }}</p>
+      </a>
+      {{- end }}
+      {{- with $res }}
+      <a class="atlas-tile" href="{{ .RelPermalink }}">
+        <span class="label">{{ .Title }}{{ with len site.Data.resources.items }} · {{ . }}{{ end }}</span>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Description }}</p>
       </a>
       {{- end }}
     </div>
